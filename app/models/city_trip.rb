@@ -1,0 +1,2 @@
+class CityTrip < ApplicationRecord
+end

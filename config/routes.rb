@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :city_trips
   resources :cities
   resources :countries
   resources :trips

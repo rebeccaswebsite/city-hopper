@@ -1,0 +1,2 @@
+class CityTripsController < ApplicationController
+end
