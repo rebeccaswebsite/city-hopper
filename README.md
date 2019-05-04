@@ -13,20 +13,20 @@ MODELS
 Models: User, Countries, Cities, Trip, CityTrip
 
 User :name, :bio
- - has many :trips
+ - has many trips
 Trip :name, :user_id
- - belongs to: user
- - has many :city_trips
+ - belongs to user
+ - has many city_trips
  - has many cities through city trips
 CityTrip :trip_id, :city_id
- - belongs to :trip
- - belongs to :city
+ - belongs to trip
+ - belongs to city
 City :name, :info, :country_id
- - belongs to: country
+ - belongs to country
  - has many city trips
- - has many trips through city
+ - has many trips through city_trips
 Country :name, :info
- - has many: cities
+ - has many cities
 
 
 VIEWS
