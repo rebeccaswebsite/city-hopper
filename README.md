@@ -45,10 +45,10 @@ City
 - index: see all cities
 - show: see specific city
 
-Trip
-- show: see a specific user's trips & delete a trip
-- new: add a new trip with a form (select city and country from a dropdown)
-- edit: edit an existing trip
+CityTrip
+- show: see a specific user's city trips & delete a trip
+- new: add a new city trip with a form (select city, country and user from a dropdown)
+- edit: edit an existing city trip
 
 CONTROLLER
 - user_controller
