@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :city_trips
-  resources :cities
+  resources :cities, only: [:index, :show]
   resources :countries, only: [:index, :show]
   resources :trips
   resources :users, only: [:show, :new, :create, :edit, :update, :destroy]
