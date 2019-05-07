@@ -1260,3 +1260,869 @@ Processing by WelcomesController#index as HTML
 Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/welcomes" for ::1 at 2019-05-07 11:06:48 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-07 11:06:51 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 35ms (Views: 20.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-07 11:07:40 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.3ms)
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-07 11:07:43 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-07 11:07:45 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" ORDER BY "countries"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."country_id" = ? LIMIT ?[0m  [["country_id", 1], ["LIMIT", 11]]
+Started GET "/users" for ::1 at 2019-05-07 11:15:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/countries" for ::1 at 2019-05-07 11:15:59 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 32ms (Views: 27.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:17:25 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:17:26 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:17:27 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:17:27 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:17:27 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:17:28 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:17:28 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:17:51 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"countries"}, missing required keys: [:id]):
+    2: 
+    3: <ul>
+    4:     <% @countries.each do |country|%>
+    5:         <li> <%= link_to country.name, country_path%> 
+    6:         </li>
+    7:     <%end%>
+    8: </ul>
+  
+app/views/countries/index.html.erb:5:in `block in _app_views_countries_index_html_erb___3243874858749888479_70272308297440'
+app/views/countries/index.html.erb:4:in `_app_views_countries_index_html_erb___3243874858749888479_70272308297440'
+Started GET "/countries" for ::1 at 2019-05-07 11:17:52 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"countries"}, missing required keys: [:id]):
+    2: 
+    3: <ul>
+    4:     <% @countries.each do |country|%>
+    5:         <li> <%= link_to country.name, country_path%> 
+    6:         </li>
+    7:     <%end%>
+    8: </ul>
+  
+app/views/countries/index.html.erb:5:in `block in _app_views_countries_index_html_erb___3243874858749888479_70272353423820'
+app/views/countries/index.html.erb:4:in `_app_views_countries_index_html_erb___3243874858749888479_70272353423820'
+Started GET "/countries" for ::1 at 2019-05-07 11:17:58 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:18:28 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kevinsmac/Documents/second_mod2/mod-2-project/app/views/countries/index.html.erb:6: syntax error, unexpected '<', expecting ')'
+        </li>
+        ^
+/Users/kevinsmac/Documents/second_mod2/mod-2-project/app/views/countries/index.html.erb:8: unknown regexp option - l
+/Users/kevinsmac/Documents/second_mod2/mod-2-project/app/views/countries/index.html.erb:8: unmatched close parenthesis: /li>
+    <%end);@output_buffer.safe_append='
+</
+/Users/kevinsmac/Documents/second_mod2/mod-2-project/app/views/countries/index.html.erb:12: unterminated string meets end of file
+          end
+              ^
+/Users/kevinsmac/Documents/second_mod2/mod-2-project/app/views/countries/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/countries/index.html.erb:6: syntax error, unexpected '<', expecting ')'
+app/views/countries/index.html.erb:8: unknown regexp option - l
+app/views/countries/index.html.erb:8: unmatched close parenthesis: /li>
+app/views/countries/index.html.erb:12: unterminated string meets end of file
+app/views/countries/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/countries" for ::1 at 2019-05-07 11:18:42 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries/1" for ::1 at 2019-05-07 11:18:43 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  Rendered countries/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:19:34 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries/1" for ::1 at 2019-05-07 11:19:36 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  Rendered countries/show.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries/1" for ::1 at 2019-05-07 11:21:40 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  Rendered countries/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries/1" for ::1 at 2019-05-07 11:22:10 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  Rendered countries/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 11:22:20 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries/2" for ::1 at 2019-05-07 11:22:21 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  Rendered countries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/countries/1" for ::1 at 2019-05-07 11:30:35 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  Rendered countries/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 76ms (Views: 54.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/countries/1" for ::1 at 2019-05-07 11:33:27 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."country_id" = ? LIMIT ?[0m  [["country_id", 1], ["LIMIT", 11]]
+  ↳ /Users/kevinsmac/.rvm/gems/ruby-2.6.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered countries/show.html.erb within layouts/application (65.6ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `info' for #<City::ActiveRecord_Associations_CollectionProxy:0x00007fd31d5cb028>):
+    1: <h2> <%= @country.name%> </h2>
+    2: <p> Info: <%= @country.info%> </p>
+    3: <p> Cities: <%= @country.cities.info%> </p>
+  
+app/views/countries/show.html.erb:3:in `_app_views_countries_show_html_erb___3205951356973152581_70272353689320'
+Started GET "/countries/1" for ::1 at 2019-05-07 11:33:29 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."country_id" = ? LIMIT ?[0m  [["country_id", 1], ["LIMIT", 11]]
+  ↳ /Users/kevinsmac/.rvm/gems/ruby-2.6.1/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered countries/show.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `info' for #<City::ActiveRecord_Associations_CollectionProxy:0x00007fd31a89bc60>):
+    1: <h2> <%= @country.name%> </h2>
+    2: <p> Info: <%= @country.info%> </p>
+    3: <p> Cities: <%= @country.cities.info%> </p>
+  
+app/views/countries/show.html.erb:3:in `_app_views_countries_show_html_erb___3205951356973152581_70272334180180'
+Started GET "/countries/1" for ::1 at 2019-05-07 11:33:46 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  Rendered countries/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mCity Load (1.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kevinsmac/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (5.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:1
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTrip Destroy (0.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTrip Destroy (0.2ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTrip Destroy (0.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCountry Destroy (0.2ms)[0m  [1m[31mDELETE FROM "countries" WHERE "countries"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCountry Destroy (0.2ms)[0m  [1m[31mDELETE FROM "countries" WHERE "countries"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCityTrip Load (0.1ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCityTrip Destroy (0.2ms)[0m  [1m[31mDELETE FROM "city_trips" WHERE "city_trips"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCityTrip Destroy (0.2ms)[0m  [1m[31mDELETE FROM "city_trips" WHERE "city_trips"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCityTrip Destroy (0.2ms)[0m  [1m[31mDELETE FROM "city_trips" WHERE "city_trips"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rebecca"], ["bio", "Londoner with wanderlust"], ["created_at", "2019-05-07 10:37:34.328479"], ["updated_at", "2019-05-07 10:37:34.328479"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kev"], ["bio", "World Cup Enthusiast"], ["created_at", "2019-05-07 10:37:34.330558"], ["updated_at", "2019-05-07 10:37:34.330558"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Winter Break"], ["user_id", 6], ["created_at", "2019-05-07 10:37:34.335222"], ["updated_at", "2019-05-07 10:37:34.335222"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Summer Holiday"], ["user_id", 6], ["created_at", "2019-05-07 10:37:34.337039"], ["updated_at", "2019-05-07 10:37:34.337039"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Autumn Weekend"], ["user_id", 5], ["created_at", "2019-05-07 10:37:34.338503"], ["updated_at", "2019-05-07 10:37:34.338503"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCountry Create (0.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "United Kingdom"], ["info", "The United Kingdom, made up of England, Scotland, Wales and Northern Ireland, is an island nation in northwestern Europe."], ["created_at", "2019-05-07 10:37:34.340118"], ["updated_at", "2019-05-07 10:37:34.340118"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCountry Create (0.3ms)[0m  [1m[32mINSERT INTO "countries" ("name", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "United States of America"], ["info", "The United States of America, commonly known as the United States or America, is a country comprising 50 states with a population of over 327 million people."], ["created_at", "2019-05-07 10:37:34.345157"], ["updated_at", "2019-05-07 10:37:34.345157"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "London"], ["info", "London is the capital city of the United Kingdom."], ["country_id", 3], ["created_at", "2019-05-07 10:37:34.366942"], ["updated_at", "2019-05-07 10:37:34.366942"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Phoenix"], ["info", "Phoenix is the capital of the southwestern U.S. state of Arizona."], ["country_id", 4], ["created_at", "2019-05-07 10:37:34.379165"], ["updated_at", "2019-05-07 10:37:34.379165"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Create (0.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "New York"], ["info", "New York City is the most populous city in the United States."], ["country_id", 4], ["created_at", "2019-05-07 10:37:34.381805"], ["updated_at", "2019-05-07 10:37:34.381805"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCity Create (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Edinburgh"], ["info", "City in Scotland"], ["country_id", 3], ["created_at", "2019-05-07 10:37:34.383657"], ["updated_at", "2019-05-07 10:37:34.383657"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCityTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "city_trips" ("trip_id", "city_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 4], ["city_id", 4], ["created_at", "2019-05-07 10:37:34.386470"], ["updated_at", "2019-05-07 10:37:34.386470"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mCityTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "city_trips" ("trip_id", "city_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 6], ["city_id", 5], ["created_at", "2019-05-07 10:37:34.388325"], ["updated_at", "2019-05-07 10:37:34.388325"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCityTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "city_trips" ("trip_id", "city_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 5], ["city_id", 6], ["created_at", "2019-05-07 10:37:34.390089"], ["updated_at", "2019-05-07 10:37:34.390089"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" ORDER BY "countries"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."country_id" = ? LIMIT ?[0m  [["country_id", 3], ["LIMIT", 11]]
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+Started GET "/countries/1" for ::1 at 2019-05-07 11:45:36 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+Completed 404 Not Found in 5ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Country with 'id'=1):
+  
+app/controllers/countries_controller.rb:8:in `show'
+Started GET "/countries/3" for ::1 at 2019-05-07 11:45:49 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 40ms (Views: 35.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:46:12 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:46:13 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:46:13 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 53ms (Views: 47.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:46:48 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 64ms (Views: 31.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:46:49 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:47:03 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 34ms (Views: 24.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:47:03 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:47:04 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:47:04 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:47:09 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 33ms (Views: 25.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:48:19 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:48:33 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:50:18 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"cities", :id=>nil}, missing required keys: [:id]):
+    1: <h2> <%= @country.name%> </h2>
+    2: <p> Info: <%= @country.info%> </p>
+    3: <p> Cities: <%= link_to @country.country_cities, city_path(@city)%> </p>
+  
+app/views/countries/show.html.erb:3:in `_app_views_countries_show_html_erb___3205951356973152581_70272359963500'
+Started GET "/countries/3" for ::1 at 2019-05-07 11:50:33 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (182.5ms)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `country_cities' for #<#<Class:0x00007fd317d96268>:0x00007fd317e8e350>
+Did you mean?  country_path):
+    1: <h2> <%= @country.name%> </h2>
+    2: <p> Info: <%= @country.info%> </p>
+    3: <p> Cities: <%= link_to @country.country_cities, city_path(country_cities)%> </p>
+  
+app/views/countries/show.html.erb:3:in `_app_views_countries_show_html_erb___3205951356973152581_70272307961920'
+Started GET "/countries/3" for ::1 at 2019-05-07 11:50:44 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:50:45 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cities/3" for ::1 at 2019-05-07 11:50:48 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cities/3" for ::1 at 2019-05-07 11:50:50 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cities/3" for ::1 at 2019-05-07 11:50:52 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cities/3" for ::1 at 2019-05-07 11:50:54 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:53:03 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 45ms (Views: 28.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cities/London" for ::1 at 2019-05-07 11:53:05 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"London"}
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cities/Edinburgh" for ::1 at 2019-05-07 11:53:07 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"Edinburgh"}
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:55:10 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 38ms (Views: 30.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/countries/3" for ::1 at 2019-05-07 11:55:10 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:8
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 3]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cities/4" for ::1 at 2019-05-07 11:55:11 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cities/7" for ::1 at 2019-05-07 11:55:13 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cities/4" for ::1 at 2019-05-07 11:55:45 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering cities/show.html.erb within layouts/application
+  Rendered cities/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
