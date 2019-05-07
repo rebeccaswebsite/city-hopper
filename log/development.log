@@ -5101,3 +5101,10 @@ Processing by CityTripsController#new as HTML
 Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/city_trips/new" for ::1 at 2019-05-07 15:42:27 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
