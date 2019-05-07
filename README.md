@@ -45,6 +45,11 @@ City
 - index: see all cities
 - show: see specific city
 
+Trip
+- new: the user can add a new trip
+- edit: the user can edit a trip name
+- show: the user can see a trip, link to add a city, and delete the trip
+
 CityTrip
 - show: see a specific user's city trips & delete a trip
 - new: add a new city trip with a form (select city, country and user from a dropdown)
