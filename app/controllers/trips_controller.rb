@@ -12,9 +12,11 @@ class TripsController < ApplicationController
 
       if @trip.save
           redirect_to trip_path(@trip)
-      else
-          render :new
-      end
+        else
+            flash[:errors] = @trip.errors.full_messages
+            flash[:data] = @trip
+            redirect_to new_trip_path
+        end
   end
 
   def edit
@@ -27,9 +29,11 @@ class TripsController < ApplicationController
       trip.update(trip_params)
       if trip.save
           redirect_to trip_path(trip)
-      else
-          render :edit
-      end
+    else
+        flash[:errors] = trip.errors.full_messages
+        flash[:data] = trip
+        redirect_to edit_trip_path
+    end
   end
 
   def destroy
