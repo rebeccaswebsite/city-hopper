@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     end
 
     def new
-        @user = User.new(user_params)
+        @user = User.new
     end
 
     def create
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     end
 
     def edit
-        @user = User.find(parama[:id])
+        @user = User.find(params[:id])
     end
 
     def update
@@ -35,12 +35,8 @@ class UsersController < ApplicationController
     def destroy
         @user = User.find(params[:id])
         @user.destroy
-        flash[:notice] = "Your profile has been deleted."
+        # flash[:notice] = "Your profile has been deleted."
         redirect_to welcomes_path
-    end
-
-    def method_name
-        
     end
 
     private
