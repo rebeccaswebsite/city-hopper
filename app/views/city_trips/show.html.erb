@@ -1,0 +1,6 @@
+<p> Your trip name: <%= @city_trip.trip.name%> </p>
+<p> Your Destination: <%= @city_trip.city.name%> </p>
+
+<%= button_to "Delete this wishlist item", {}, { method: :delete } %> <br>
+
+<%= link_to "See all trips on your wishlist", city_trip_path%>

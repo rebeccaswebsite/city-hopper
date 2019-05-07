@@ -1,0 +1,6 @@
+<%= form_for @city_trip do |f| %>
+   <strong> Pick your trip: <%= f.collection_select(:trip_id, Trip.all, :id, :name) %> </strong> <br> <br>
+   <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+  <%= f.submit "Submit" %>
+
+  <%end%>

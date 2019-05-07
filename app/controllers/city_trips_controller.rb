@@ -1,2 +1,47 @@
 class CityTripsController < ApplicationController
+
+    def index
+        @city_trips = CityTrip.all
+    end
+
+    def show 
+        @city_trip = CityTrip.find(params[:id])
+    end
+
+    def new
+        @city_trip = CityTrip.new
+    end
+
+    def create
+        city_trip = CityTrip.new(city_trips_params)
+        city_trip.save
+        if city_trip.save
+            redirect_to city_trip_path(city_trip)
+        else
+            render :edit
+        end
+    end
+
+    def edit
+        @city_trip = CityTrip.find(params[:id])
+    end
+
+    def update
+        city_trip = CityTrip.find(params[:id])
+        
+        city_trip.update(city_trips_params)
+        if city_trip.save
+            redirect_to city_trip_path(city_trip)
+        else
+            render :edit
+        end
+    end
+
+    def destroy
+
+    end
+
+    def city_trips_params
+        params.require(:city_trip).permit(:trip_id, :city_id)
+    end
 end
