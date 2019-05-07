@@ -2,7 +2,8 @@
 
 <h2> Your Bio: <%= @user.bio%> </h2>
 
+<h3> <%= link_to "Add a new Trip", new_trip_path %> </h3>
+
 <%= link_to "Edit your Profile", edit_user_path %>
 
 <%= button_to "Delete User", {}, { method: :delete } %>
-
