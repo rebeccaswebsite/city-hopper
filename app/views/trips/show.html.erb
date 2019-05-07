@@ -1,5 +1,8 @@
 <h1> Your trip: <%= @trip.name %> </h1>
+<p> User: <%= @trip.user.name %>
 
-<%= link_to "Add a city to your trip", new_city_trip_path %>
+<br>
+
+<%= link_to "Add a location to your trip", new_city_trip_path %>
 
 <%= button_to "Delete Trip", {}, { method: :delete } %>
