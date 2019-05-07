@@ -4,7 +4,4 @@ class Trip < ApplicationRecord
   has_many :cities, through: :city_trips
   validates :name, :user_id, presence: true
 
-  def trip_desination
-    self.cities.map {|city| city }
-  end
 end

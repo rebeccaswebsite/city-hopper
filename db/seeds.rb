@@ -16,10 +16,10 @@ united_states = Country.create(name: "United States of America", info: "The Unit
 
 london = City.create(name: "London", info: "London is the capital city of the United Kingdom.", country: united_kingdom)
 phoenix = City.create(name: "Phoenix", info: "Phoenix is the capital of the southwestern U.S. state of Arizona.", country: united_states)
-new_yok = City.create(name: "New York", info: "New York City is the most populous city in the United States.", country: united_states)
+new_york = City.create(name: "New York", info: "New York City is the most populous city in the United States.", country: united_states)
 edinburgh = City.create(name: "Edinburgh", info: "City in Scotland", country: united_kingdom)
 
 
 CityTrip.create(city: london, trip: winter_break)
 CityTrip.create(city: phoenix, trip: autumn_weekend)
-CityTrip.create(city: new_yok, trip: summer_holiday)
+CityTrip.create(city: new_york, trip: summer_holiday)

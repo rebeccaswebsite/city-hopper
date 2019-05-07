@@ -3357,3 +3357,1747 @@ Unpermitted parameters: :user_id, :trip_desination
 Completed 200 OK in 91ms (Views: 70.7ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/trips" for ::1 at 2019-05-07 14:56:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/trips"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/trips" for ::1 at 2019-05-07 14:57:10 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bHqIP1xdav3JSxBpJY3wutdByXpj3vT0pUmXGWLhNhB1Tbm/9M2lb0Z7sWL8mO8iyBPgxFwpySl3zDJm8gSFVg==", "trip"=>{"name"=>"Birthday Vacay", "user_id"=>"8", "trip_desination"=>"4"}, "commit"=>"Submit"}
+Unpermitted parameters: :user_id, :trip_desination
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (1.6ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (10.9ms)
+  Rendered trips/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 93ms (Views: 81.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-07 14:59:06 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-07 14:59:51 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 14:59:55 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (6.9ms)
+  Rendered trips/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:00:20 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (3.5ms)
+  Rendered trips/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:00:21 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (7.5ms)
+  Rendered trips/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:00:34 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (5.5ms)
+  Rendered trips/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:00:35 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (4.9ms)
+  Rendered trips/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:01:12 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (7.8ms)
+  Rendered trips/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:01:26 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8pwKSMocog8t+xQxeVJQlBXw06lvgdelDmGrkbb+ZTbrqzvIYoxtnaLLtTqgR08MCqL6F1B26njc5A7uJhvWcA==", "trip"=>{"name"=>"Trip of a lifetime", "user_id"=>"7", "trip_desination"=>"6"}, "commit"=>"Submit"}
+Unpermitted parameters: :user_id, :trip_desination
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (4.3ms)
+  Rendered trips/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 54ms (Views: 44.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-07 15:01:42 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 102ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-07 15:01:44 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-07 15:02:33 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cities" for ::1 at 2019-05-07 15:02:35 +0100
+Processing by CitiesController#index as HTML
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/cities/index.html.erb:3
+  Rendered cities/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 166ms (Views: 162.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 15:02:37 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (1.7ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 78ms (Views: 64.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-07 15:03:19 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 15:03:21 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 70ms (Views: 67.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cities" for ::1 at 2019-05-07 15:03:23 +0100
+Processing by CitiesController#index as HTML
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/cities/index.html.erb:3
+  Rendered cities/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cities/6" for ::1 at 2019-05-07 15:03:25 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:7
+  Rendering cities/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/cities/show.html.erb:3
+  Rendered cities/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 53ms (Views: 46.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cities/5" for ::1 at 2019-05-07 15:03:28 +0100
+Processing by CitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cities_controller.rb:7
+  Rendering cities/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/cities/show.html.erb:3
+  Rendered cities/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:03:30 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (11.5ms)
+  Rendered trips/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-07 15:03:32 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 52ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-07 15:03:35 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 70ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-07 15:03:43 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.8ms)
+  Rendered users/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 55ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-07 15:03:46 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-07 15:04:51 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 73ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-07 15:05:48 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-07 15:05:48 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-07 15:06:01 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.8ms)
+  Rendered users/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 61ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-07 15:06:03 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cities" for ::1 at 2019-05-07 15:06:04 +0100
+Processing by CitiesController#index as HTML
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/cities/index.html.erb:3
+  Rendered cities/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:06:09 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (8.1ms)
+  Rendered trips/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 51ms (Views: 45.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:06:18 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (15.0ms)
+  Rendered trips/new.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 66ms (Views: 61.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:06:38 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (6.3ms)
+  Rendered trips/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 81ms (Views: 76.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:06:39 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (5.4ms)
+  Rendered trips/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:06:44 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u8VNQaxL/QYb54uN3Pf14atBT53cws/1A2/1HvFRqFKi8nzBBNsylJTXKoYF4up5tBNmI+M18ijR6lBhYbQbFA==", "trip"=>{"name"=>"Birthday Vacay", "user_id"=>"7", "trip_desination"=>"6"}, "commit"=>"Submit"}
+Unpermitted parameters: :user_id, :trip_desination
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (4.4ms)
+  Rendered trips/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 47ms (Views: 37.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:06:59 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZU9HuPQZUlgpp86PToaOUTVC3vMeXt4FM9UnsRaHB358eHY4XImdyqaXb4SXk5HJKhD3TSGp49jhUILOhmK0OA==", "trip"=>{"name"=>"Birthday Vacay", "user_id"=>"7", "trip_desination"=>"4"}, "commit"=>"Submit"}
+Unpermitted parameters: :user_id, :trip_desination
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (5.1ms)
+  Rendered trips/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 40ms (Views: 31.8ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mTrip Load (2.6ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebecca/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTrip Destroy (0.5ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 8]]
+  ↳ db/seeds.rb:2
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTrip Destroy (0.5ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 9]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mCountry Load (2.9ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCountry Destroy (0.5ms)[0m  [1m[31mDELETE FROM "countries" WHERE "countries"."id" = ?[0m  [["id", 7]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCountry Destroy (0.4ms)[0m  [1m[31mDELETE FROM "countries" WHERE "countries"."id" = ?[0m  [["id", 8]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (0.5ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 4]]
+  ↳ db/seeds.rb:4
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (3.7ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 5]]
+  ↳ db/seeds.rb:4
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (0.5ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 6]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (0.6ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 7]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCityTrip Load (0.6ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCityTrip Destroy (0.4ms)[0m  [1m[31mDELETE FROM "city_trips" WHERE "city_trips"."id" = ?[0m  [["id", 4]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCityTrip Destroy (0.5ms)[0m  [1m[31mDELETE FROM "city_trips" WHERE "city_trips"."id" = ?[0m  [["id", 5]]
+  ↳ db/seeds.rb:5
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCityTrip Destroy (0.5ms)[0m  [1m[31mDELETE FROM "city_trips" WHERE "city_trips"."id" = ?[0m  [["id", 6]]
+  ↳ db/seeds.rb:5
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rebecca"], ["bio", "Londoner with wanderlust"], ["created_at", "2019-05-07 14:08:23.622541"], ["updated_at", "2019-05-07 14:08:23.622541"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kev"], ["bio", "World Cup Enthusiast"], ["created_at", "2019-05-07 14:08:23.627866"], ["updated_at", "2019-05-07 14:08:23.627866"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTrip Create (0.5ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Winter Break"], ["user_id", 10], ["created_at", "2019-05-07 14:08:23.640792"], ["updated_at", "2019-05-07 14:08:23.640792"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTrip Create (0.5ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Summer Holiday"], ["user_id", 10], ["created_at", "2019-05-07 14:08:23.645649"], ["updated_at", "2019-05-07 14:08:23.645649"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mTrip Create (0.5ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Autumn Weekend"], ["user_id", 9], ["created_at", "2019-05-07 14:08:23.650186"], ["updated_at", "2019-05-07 14:08:23.650186"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCountry Create (1.1ms)[0m  [1m[32mINSERT INTO "countries" ("name", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "United Kingdom"], ["info", "The United Kingdom, made up of England, Scotland, Wales and Northern Ireland, is an island nation in northwestern Europe."], ["created_at", "2019-05-07 14:08:23.654926"], ["updated_at", "2019-05-07 14:08:23.654926"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "United States of America"], ["info", "The United States of America, commonly known as the United States or America, is a country comprising 50 states with a population of over 327 million people."], ["created_at", "2019-05-07 14:08:23.666741"], ["updated_at", "2019-05-07 14:08:23.666741"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "London"], ["info", "London is the capital city of the United Kingdom."], ["country_id", 9], ["created_at", "2019-05-07 14:08:23.671494"], ["updated_at", "2019-05-07 14:08:23.671494"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Phoenix"], ["info", "Phoenix is the capital of the southwestern U.S. state of Arizona."], ["country_id", 10], ["created_at", "2019-05-07 14:08:23.676282"], ["updated_at", "2019-05-07 14:08:23.676282"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "New York"], ["info", "New York City is the most populous city in the United States."], ["country_id", 10], ["created_at", "2019-05-07 14:08:23.681137"], ["updated_at", "2019-05-07 14:08:23.681137"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Edinburgh"], ["info", "City in Scotland"], ["country_id", 9], ["created_at", "2019-05-07 14:08:23.685967"], ["updated_at", "2019-05-07 14:08:23.685967"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCityTrip Create (0.6ms)[0m  [1m[32mINSERT INTO "city_trips" ("trip_id", "city_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 10], ["city_id", 8], ["created_at", "2019-05-07 14:08:23.692150"], ["updated_at", "2019-05-07 14:08:23.692150"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mCityTrip Create (1.3ms)[0m  [1m[32mINSERT INTO "city_trips" ("trip_id", "city_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 12], ["city_id", 9], ["created_at", "2019-05-07 14:08:23.697235"], ["updated_at", "2019-05-07 14:08:23.697235"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebecca/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 9]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 10]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTrip Destroy (1.0ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 10]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTrip Destroy (1.2ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 11]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTrip Destroy (0.5ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 12]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCountry Destroy (0.4ms)[0m  [1m[31mDELETE FROM "countries" WHERE "countries"."id" = ?[0m  [["id", 9]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCountry Destroy (1.9ms)[0m  [1m[31mDELETE FROM "countries" WHERE "countries"."id" = ?[0m  [["id", 10]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 8]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (0.6ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 9]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 10]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCity Destroy (0.9ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = ?[0m  [["id", 11]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCityTrip Destroy (0.4ms)[0m  [1m[31mDELETE FROM "city_trips" WHERE "city_trips"."id" = ?[0m  [["id", 7]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCityTrip Destroy (0.5ms)[0m  [1m[31mDELETE FROM "city_trips" WHERE "city_trips"."id" = ?[0m  [["id", 8]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rebecca"], ["bio", "Londoner with wanderlust"], ["created_at", "2019-05-07 14:08:40.156004"], ["updated_at", "2019-05-07 14:08:40.156004"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kev"], ["bio", "World Cup Enthusiast"], ["created_at", "2019-05-07 14:08:40.161333"], ["updated_at", "2019-05-07 14:08:40.161333"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTrip Create (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Winter Break"], ["user_id", 12], ["created_at", "2019-05-07 14:08:40.192912"], ["updated_at", "2019-05-07 14:08:40.192912"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTrip Create (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Summer Holiday"], ["user_id", 12], ["created_at", "2019-05-07 14:08:40.200758"], ["updated_at", "2019-05-07 14:08:40.200758"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mTrip Create (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Autumn Weekend"], ["user_id", 11], ["created_at", "2019-05-07 14:08:40.206594"], ["updated_at", "2019-05-07 14:08:40.206594"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCountry Create (0.7ms)[0m  [1m[32mINSERT INTO "countries" ("name", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "United Kingdom"], ["info", "The United Kingdom, made up of England, Scotland, Wales and Northern Ireland, is an island nation in northwestern Europe."], ["created_at", "2019-05-07 14:08:40.215115"], ["updated_at", "2019-05-07 14:08:40.215115"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "United States of America"], ["info", "The United States of America, commonly known as the United States or America, is a country comprising 50 states with a population of over 327 million people."], ["created_at", "2019-05-07 14:08:40.219957"], ["updated_at", "2019-05-07 14:08:40.219957"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "London"], ["info", "London is the capital city of the United Kingdom."], ["country_id", 11], ["created_at", "2019-05-07 14:08:40.225864"], ["updated_at", "2019-05-07 14:08:40.225864"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Phoenix"], ["info", "Phoenix is the capital of the southwestern U.S. state of Arizona."], ["country_id", 12], ["created_at", "2019-05-07 14:08:40.230957"], ["updated_at", "2019-05-07 14:08:40.230957"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCity Create (0.7ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "New York"], ["info", "New York City is the most populous city in the United States."], ["country_id", 12], ["created_at", "2019-05-07 14:08:40.235716"], ["updated_at", "2019-05-07 14:08:40.235716"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "info", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Edinburgh"], ["info", "City in Scotland"], ["country_id", 11], ["created_at", "2019-05-07 14:08:40.241712"], ["updated_at", "2019-05-07 14:08:40.241712"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCityTrip Create (0.5ms)[0m  [1m[32mINSERT INTO "city_trips" ("trip_id", "city_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 13], ["city_id", 12], ["created_at", "2019-05-07 14:08:40.248036"], ["updated_at", "2019-05-07 14:08:40.248036"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mCityTrip Create (0.5ms)[0m  [1m[32mINSERT INTO "city_trips" ("trip_id", "city_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 15], ["city_id", 13], ["created_at", "2019-05-07 14:08:40.252677"], ["updated_at", "2019-05-07 14:08:40.252677"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCityTrip Create (0.4ms)[0m  [1m[32mINSERT INTO "city_trips" ("trip_id", "city_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 14], ["city_id", 14], ["created_at", "2019-05-07 14:08:40.257414"], ["updated_at", "2019-05-07 14:08:40.257414"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+Started POST "/trips" for ::1 at 2019-05-07 15:08:47 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I4hxo9P7OhhoQQFRu9WxKcONyoOWhEul45AnBvOIIEM6v0Aje2v1iudxoFpiwK6x3N/jPalzdngxFYJ5Y22TBQ==", "trip"=>{"name"=>"Birthday Vacay", "user_id"=>"7", "trip_desination"=>"4"}, "commit"=>"Submit"}
+Unpermitted parameters: :user_id, :trip_desination
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (3.8ms)
+  Rendered trips/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 94ms (Views: 67.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" ORDER BY "trips"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/trips" for ::1 at 2019-05-07 15:13:54 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l2z94SyUGs/0R7+yeOUx+cK8spabL8WepT2Et3x057KOW8xhhATVXXt3Hrmh8C5h3e6bKKTY+EN3uCHI7JFU9A==", "trip"=>{"name"=>"Birthday Vacay", "user_id"=>"11", "trip_desination"=>"13"}, "commit"=>"Submit"}
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (0.5ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Birthday Vacay"], ["user_id", 11], ["created_at", "2019-05-07 14:13:54.215251"], ["updated_at", "2019-05-07 14:13:54.215251"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+Redirected to http://localhost:3000/trips/16
+Completed 302 Found in 29ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/trips/16" for ::1 at 2019-05-07 15:13:54 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-07 15:14:00 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trips" for ::1 at 2019-05-07 15:14:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/trips"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/trips" for ::1 at 2019-05-07 15:14:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/trips"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/trips" for ::1 at 2019-05-07 15:14:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/trips"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/welcomes" for ::1 at 2019-05-07 15:14:26 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:14:29 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (31.8ms)
+  Rendered trips/new.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 78ms (Views: 68.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:14:36 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TvQt1tVhgYq54mF47J3W7UHTmqcJ441P7nJOFicRyxtCwVxqL5/dH+Ob7E2AVv4FjtrHtf7HwWeWw5FjNHIvLA==", "trip"=>{"name"=>"gfhjmn", "user_id"=>"11", "trip_desination"=>"14"}, "commit"=>"Submit"}
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "gfhjmn"], ["user_id", 11], ["created_at", "2019-05-07 14:14:36.516736"], ["updated_at", "2019-05-07 14:14:36.516736"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+Redirected to http://localhost:3000/trips/17
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/trips/17" for ::1 at 2019-05-07 15:14:36 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 47ms (Views: 40.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" ORDER BY "trips"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started DELETE "/trips/17" for ::1 at 2019-05-07 15:15:20 +0100
+Processing by TripsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jdGOyoPXuXAK8BeQW4tVljD0PVuGA2Vd8qvcLqGGlMiU5r9KK0d24oXAtpuCnkoOL6YU5bn0WIAgLnlRMWMnjg==", "id"=>"17"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:36
+  [1m[36mTrip Destroy (0.4ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/trips_controller.rb:36
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:36
+Redirected to http://localhost:3000/welcomes
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-07 15:15:20 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:15:24 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (24.3ms)
+  Rendered trips/new.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 58ms (Views: 51.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:15:27 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mojkj21M0LwRBycfnKgoryOOnUUbOfjswI7tePpFuy2WvZUzl7KMKUt+qirwYwBH7IfAV+wdtMS4PzIN6SZfGg==", "trip"=>{"name"=>"Christmas Holiday", "user_id"=>"11", "trip_desination"=>"12"}, "commit"=>"Submit"}
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Christmas Holiday"], ["user_id", 11], ["created_at", "2019-05-07 14:15:27.249495"], ["updated_at", "2019-05-07 14:15:27.249495"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+Redirected to http://localhost:3000/trips/18
+Completed 302 Found in 11ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/trips/18" for ::1 at 2019-05-07 15:15:27 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-07 15:15:28 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:16:07 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (8.7ms)
+  Rendered trips/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:16:08 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (6.1ms)
+  Rendered trips/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:16:10 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m7FhgGTXQwhoJu0BIA4ziU/B6Ufz+Pj1SOfcILQby4iChlAAzEeMmucWTAr5GywRUJPA+cwPxSiaYnlfJP54zg==", "trip"=>{"name"=>"Birthday Vacay", "user_id"=>"11", "trip_desination"=>"12"}, "commit"=>"Submit"}
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Birthday Vacay"], ["user_id", 11], ["created_at", "2019-05-07 14:16:10.402513"], ["updated_at", "2019-05-07 14:16:10.402513"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+Redirected to http://localhost:3000/trips/19
+Completed 302 Found in 11ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/trips/19" for ::1 at 2019-05-07 15:16:10 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 54ms (Views: 49.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trips/19" for ::1 at 2019-05-07 15:16:52 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 53ms (Views: 47.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:19:54 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (48.8ms)
+  Rendered trips/new.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 173ms (Views: 150.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:22:45 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (41.1ms)
+  Rendered trips/new.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 93ms (Views: 72.7ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:22:50 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WtRBH5h1qPTw+bXGxo2KFBIGJbqAPirdotm1a5S3LIJD43CfMOVnZn/JFM0fmJWMDVQMBL/JFwBwXBAUBFKfxA==", "trip"=>{"name"=>"Christmas Holiday", "user_id"=>"11", "trip_desination"=>"14"}, "commit"=>"Submit"}
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Christmas Holiday"], ["user_id", 11], ["created_at", "2019-05-07 14:22:50.654671"], ["updated_at", "2019-05-07 14:22:50.654671"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:16
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:16
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" INNER JOIN "city_trips" ON "cities"."id" = "city_trips"."city_id" WHERE "city_trips"."trip_id" = ?[0m  [["trip_id", 20]]
+  ↳ app/models/trip.rb:8
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (16.2ms)
+  Rendered trips/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 74ms (Views: 42.5ms | ActiveRecord: 5.9ms)
+
+
+  [1m[36mCityTrip Load (2.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCityTrip Load (0.5ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" LIMIT ?[0m  [["LIMIT", 11]]
+Started PATCH "/trips/20" for ::1 at 2019-05-07 15:23:48 +0100
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jo+Glv9rSGLre2Q94839ohAIFlxwsnPsEJm+0l8g3ZY/uLcWV/uH8GRLxTY62OI6D1o/4k9FTjHCHButz8Vu0A==", "trip"=>{"name"=>"Christmas Holiday", "user_id"=>"11", "trip_desination"=>"12"}, "commit"=>"Submit", "id"=>"20"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:29
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:32
+Redirected to http://localhost:3000/trips/20
+Completed 302 Found in 138ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/trips/20" for ::1 at 2019-05-07 15:23:49 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 107ms (Views: 104.3ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mCityTrip Load (0.5ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCityTrip Load (0.5ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/trips" for ::1 at 2019-05-07 15:24:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/trips"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/trips/new" for ::1 at 2019-05-07 15:24:36 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (65.6ms)
+  Rendered trips/new.html.erb within layouts/application (69.6ms)
+Completed 200 OK in 167ms (Views: 143.4ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:24:54 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+70Rj2T6Rg9jAFe7XYGvVxAJpGDS8KgekMl3l8r9uVHiiiAPzGqJneww9rCElLDPD1uN3u0HlcNCTNLoWhgKFw==", "trip"=>{"name"=>"Trip of a lifetime", "user_id"=>"11", "trip_desination"=>"14"}, "commit"=>"Submit"}
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (0.8ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Trip of a lifetime"], ["user_id", 11], ["created_at", "2019-05-07 14:24:54.356010"], ["updated_at", "2019-05-07 14:24:54.356010"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 4.4ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007ff166378160>
+Did you mean?  try):
+  
+app/controllers/trips_controller.rb:15:in `create'
+Started GET "/trips.new" for ::1 at 2019-05-07 15:25:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/trips.new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/trips/new" for ::1 at 2019-05-07 15:25:24 +0100
+  
+LoadError (cannot load such file -- pry):
+  
+app/controllers/trips_controller.rb:1:in `<main>'
+Started GET "/trips/new" for ::1 at 2019-05-07 15:25:40 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (29.3ms)
+  Rendered trips/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 107ms (Views: 91.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:25:46 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ah5elKT5jgbQc5JrUs8U1lu26s3nBgOV0ovU4DJcg79P0j6+gMpqpRxb0J0XiPLRjzyFQhrJdOFz4osECzBSA==", "trip"=>{"name"=>"Birthday Vacay", "user_id"=>"11", "trip_desination"=>"14"}, "commit"=>"Submit"}
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Birthday Vacay"], ["user_id", 11], ["created_at", "2019-05-07 14:25:46.017598"], ["updated_at", "2019-05-07 14:25:46.017598"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:18
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities" INNER JOIN "city_trips" ON "cities"."id" = "city_trips"."city_id" WHERE "city_trips"."trip_id" = ?[0m  [["trip_id", 22]]
+  ↳ app/models/trip.rb:8
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (21.3ms)
+  Rendered trips/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 21963ms (Views: 142.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/trips" for ::1 at 2019-05-07 15:26:21 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebecca/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/trips"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/trips/new" for ::1 at 2019-05-07 15:26:23 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (85.8ms)
+  Rendered trips/new.html.erb within layouts/application (87.8ms)
+Completed 200 OK in 696ms (Views: 658.6ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:26:30 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P0K8GWXJQ7YIHpsrRAOzIZgaETK22ygrbWsgKCwS9gUmdY2ZzVmMJIcuOiCdFqy5h0g4jIksFfa/7oVXvPdFQw==", "trip"=>{"name"=>"Trip of a lifetime", "user_id"=>"11", "trip_desination"=>"15"}, "commit"=>"Submit"}
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (0.8ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Trip of a lifetime"], ["user_id", 11], ["created_at", "2019-05-07 14:26:30.193319"], ["updated_at", "2019-05-07 14:26:30.193319"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:18
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" INNER JOIN "city_trips" ON "cities"."id" = "city_trips"."city_id" WHERE "city_trips"."trip_id" = ?[0m  [["trip_id", 23]]
+  ↳ app/models/trip.rb:8
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (26.9ms)
+  Rendered trips/new.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 25473ms (Views: 81.1ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/trips" for ::1 at 2019-05-07 15:26:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/trips"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/trips/new" for ::1 at 2019-05-07 15:27:02 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (8.9ms)
+  Rendered trips/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:27:07 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+sUB3zoMuf0AJMDAwmpdFye03dsfIWP6P9BBOBdjl8y3CWH1Hj9dXswMgjaHLbsQ8z6yVOLuFI6euR7cLg9GQ==", "trip"=>{"name"=>"Trip of a lifetime", "user_id"=>"11", "trip_desination"=>"14"}, "commit"=>"Submit"}
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Trip of a lifetime"], ["user_id", 11], ["created_at", "2019-05-07 14:27:07.273407"], ["updated_at", "2019-05-07 14:27:07.273407"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:18
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:18
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" INNER JOIN "city_trips" ON "cities"."id" = "city_trips"."city_id" WHERE "city_trips"."trip_id" = ?[0m  [["trip_id", 24]]
+  ↳ app/models/trip.rb:8
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (9.9ms)
+  Rendered trips/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 150870ms (Views: 87.2ms | ActiveRecord: 4.2ms)
+
+
+Started PATCH "/trips/24" for ::1 at 2019-05-07 15:29:40 +0100
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Iu45rgCdVm9vEE6JwAWmMT+Ywv1DEfGHDBkKIP9833tvIlmEJK6yzKM4DH+FQkA26xKtcr7ehvOtcFXExhAOw==", "trip"=>{"name"=>"Trip of a lifetime", "user_id"=>"11", "trip_desination"=>"12"}, "commit"=>"Submit", "id"=>"24"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trips_controller.rb:32
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'trip_desination' for Trip.):
+  
+app/controllers/trips_controller.rb:32:in `update'
+Started PATCH "/trips/24" for ::1 at 2019-05-07 15:33:09 +0100
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Iu45rgCdVm9vEE6JwAWmMT+Ywv1DEfGHDBkKIP9833tvIlmEJK6yzKM4DH+FQkA26xKtcr7ehvOtcFXExhAOw==", "trip"=>{"name"=>"Trip of a lifetime", "user_id"=>"11", "trip_desination"=>"12"}, "commit"=>"Submit", "id"=>"24"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:30
+Unpermitted parameter: :trip_desination
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:33
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:33
+Redirected to http://localhost:3000/trips/24
+Completed 302 Found in 49ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/trips/24" for ::1 at 2019-05-07 15:33:09 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/24" for ::1 at 2019-05-07 15:34:01 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 58ms (Views: 52.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/24/edit" for ::1 at 2019-05-07 15:34:14 +0100
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:26
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities" INNER JOIN "city_trips" ON "cities"."id" = "city_trips"."city_id" WHERE "city_trips"."trip_id" = ?[0m  [["trip_id", 24]]
+  ↳ app/models/trip.rb:8
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/trips/_form.html.erb:5
+  Rendered trips/_form.html.erb (75.4ms)
+  Rendered trips/edit.html.erb within layouts/application (77.1ms)
+Completed 200 OK in 153ms (Views: 142.8ms | ActiveRecord: 4.7ms)
+
+
+Started PATCH "/trips/24" for ::1 at 2019-05-07 15:34:22 +0100
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aPVz8YEy7QU7CrRFAKVUFcW+MKax/+le9Trcl2XMXeRxwkJxKaIil7Q6FU7ZsEuN2uwZGI4I1IMnv3no9Snuog==", "trip"=>{"name"=>"Trip of a lifetime", "user_id"=>"12", "trip_desination"=>"15"}, "commit"=>"Submit", "id"=>"24"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:30
+Unpermitted parameter: :trip_desination
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[36mTrip Update (0.6ms)[0m  [1m[33mUPDATE "trips" SET "user_id" = ?, "updated_at" = ? WHERE "trips"."id" = ?[0m  [["user_id", 12], ["updated_at", "2019-05-07 14:34:22.026491"], ["id", 24]]
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:33
+Redirected to http://localhost:3000/trips/24
+Completed 302 Found in 19ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/trips/24" for ::1 at 2019-05-07 15:34:22 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 83ms (Views: 77.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/trips/24/edit" for ::1 at 2019-05-07 15:37:09 +0100
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTrip Load (2.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:26
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  Rendered trips/_form.html.erb (52.1ms)
+  Rendered trips/edit.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 248ms (Views: 162.6ms | ActiveRecord: 7.7ms)
+
+
+Started PATCH "/trips/24" for ::1 at 2019-05-07 15:37:12 +0100
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"el2vXZCeX5EUKWRVNntrppsjccWxKDa17zMnfU0dYuFjap7dOA6QA5sZxV7vbnQ+hHFYe47fC2g9toIC3fjRpw==", "trip"=>{"name"=>"Trip of a lifetime", "user_id"=>"12"}, "commit"=>"Submit", "id"=>"24"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:33
+Redirected to http://localhost:3000/trips/24
+Completed 302 Found in 18ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/trips/24" for ::1 at 2019-05-07 15:37:12 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 76ms (Views: 70.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/24" for ::1 at 2019-05-07 15:37:39 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 67ms (Views: 61.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-07 15:37:40 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:38:04 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  Rendered trips/_form.html.erb (4.6ms)
+  Rendered trips/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 66ms (Views: 62.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:38:16 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lK8sCkeyJ+QZBt3PDoBcfFPH/Rpu4YEeMF2C5jmcq2eNmB2K7yLodpY2fMTXlUPkTJXUpFEWvMPi2CeZqXkYIQ==", "trip"=>{"name"=>"Tripin", "user_id"=>"11"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (1.1ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tripin"], ["user_id", 11], ["created_at", "2019-05-07 14:38:16.315218"], ["updated_at", "2019-05-07 14:38:16.315218"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+Completed 500 Internal Server Error in 29762ms (ActiveRecord: 4.8ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/trips_controller.rb:16:in `create'
+Started GET "/trips/new" for ::1 at 2019-05-07 15:39:02 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebecca/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  Rendered trips/_form.html.erb (62.4ms)
+  Rendered trips/new.html.erb within layouts/application (71.5ms)
+Completed 200 OK in 660ms (Views: 540.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-07 15:39:31 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/trips/_form.html.erb:4
+  Rendered trips/_form.html.erb (14.5ms)
+  Rendered trips/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 129ms (Views: 102.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-07 15:39:34 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NCrc85l/ezZr47VDBu0cprM+Ks/lWm1kkeamJy1HEeQtHe1zMe+0pOTTFEjf+AM+rGwDcdqtULlDYwNYvaKiog==", "trip"=>{"name"=>"Christmas Holiday", "user_id"=>"11"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `city_trip' for #<TripsController:0x00007fa46869f9b0>
+Did you mean?  city_url):
+  
+app/controllers/trips_controller.rb:13:in `create'
+Started POST "/trips" for ::1 at 2019-05-07 15:39:56 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NCrc85l/ezZr47VDBu0cprM+Ks/lWm1kkeamJy1HEeQtHe1zMe+0pOTTFEjf+AM+rGwDcdqtULlDYwNYvaKiog==", "trip"=>{"name"=>"Christmas Holiday", "user_id"=>"11"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:13
+  [1m[36mTrip Create (0.8ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Christmas Holiday"], ["user_id", 11], ["created_at", "2019-05-07 14:39:56.913551"], ["updated_at", "2019-05-07 14:39:56.913551"]]
+  ↳ app/controllers/trips_controller.rb:13
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:13
+Redirected to http://localhost:3000/trips/26
+Completed 302 Found in 136ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/trips/26" for ::1 at 2019-05-07 15:39:56 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 250ms (Views: 179.5ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" ORDER BY "trips"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/city_trips/new" for ::1 at 2019-05-07 15:40:29 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
