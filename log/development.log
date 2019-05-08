@@ -12298,3 +12298,718 @@ Processing by WelcomesController#index as HTML
 Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/new" for ::1 at 2019-05-08 13:06:47 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/images/home_page.jpg" for ::1 at 2019-05-08 13:06:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/images/home_page.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-05-08 13:07:04 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ygLCHJ4OtRYpZxeboD2J69Tgyqtj+5YD35tPT6/WE5h+Gqx1BWnpF1H7qyYhcMKMweplJe/t9MdoU3j+jpI4pg==", "user"=>{"username"=>"0118ayush", "bio"=>"You are awesome", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "0118ayush"], ["bio", "You are awesome"], ["created_at", "2019-05-08 12:07:04.491306"], ["updated_at", "2019-05-08 12:07:04.491306"], ["password_digest", "$2a$10$hsAjod48EJzQr6FshjBJpOq4D7L/bsB4OgPD.0yY2iKosfilaGS5e"]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 79ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/4" for ::1 at 2019-05-08 13:07:04 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/4" for ::1 at 2019-05-08 13:07:08 +0100
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KInqAVc7BXcaccV80eoz0ea7krwXpwj0F7DD1Q6DjpVZeHFqbQwXq5c7XQ2D6jD2KTC5mA/pxMeiznw7OA+Y5Q==", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:41
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/users_controller.rb:41
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:41
+Redirected to http://localhost:3000/welcomes
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-08 13:07:08 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-08 13:09:30 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/images/home_page.jpg" for ::1 at 2019-05-08 13:09:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/images/home_page.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-05-08 13:09:41 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cqgB9PKRUB/ToHP7/l4ruE7f3C4PxMHbJMsrEEuwA83GsG+dafYMHqs8z0Z/E2DfW9VzoIPSox+TAxyhavQo8w==", "user"=>{"username"=>"0118ayush", "bio"=>"You are awesome", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "0118ayush"], ["bio", "You are awesome"], ["created_at", "2019-05-08 12:09:41.536461"], ["updated_at", "2019-05-08 12:09:41.536461"], ["password_digest", "$2a$10$HnGCPxIxerS88Ov.1mWKueDhdQ0.RVH4nXTBtgedXVetk/FmQ83jm"]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 62ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/users/4" for ::1 at 2019-05-08 13:09:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-05-08 13:09:44 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"GxEt2GSMbj62JF8mEY9gtInJuKDTjIYzg0fGRjiocG5q4LazXrt84jtux1dDj2OTRkKThMvCSgA2OXmoDiRmHg=="}
+Redirected to http://localhost:3000/welcomes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-08 13:09:44 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:09:47 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-08 13:09:58 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4PDhFfjDrh3ONburhkAtlcZqRYy8DOBqGD9QIT9IxZRj8lKUvhSwOh8ZA/dzfWBbbUL6+TCpFy1v4o+GZNb3yQ==", "user"=>{"username"=>"0118ayush", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "0118ayush"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/login_form
+Completed 302 Found in 58ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:09:58 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-08 13:10:10 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nOn9n9Ct3qlCZcJA8oYFcOvkUrE+WSDtJwXDbI8YPrLtGGb06prMdc8vWjGghgZXJG95lSYX7N6Se3yCuZQowg==", "user"=>{"username"=>"0118ayush", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "0118ayush"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 60ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/4" for ::1 at 2019-05-08 13:10:10 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-05-08 13:12:43 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"LJejoeYnqW8C3yJm7EXnxfSZvV5lbd6IFbBlNH8pk7VdZjjK3BC7s4+Vuhe+ReTiOxKWen0jErugztraSaWFxQ=="}
+Redirected to http://localhost:3000/welcomes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-08 13:12:43 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <% flash[:errors].each do |key, val| %>
+    15:    <%=val%>
+    16:   <%end%> 
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330152423980'
+Started DELETE "/logout" for ::1 at 2019-05-08 13:13:01 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"LJejoeYnqW8C3yJm7EXnxfSZvV5lbd6IFbBlNH8pk7VdZjjK3BC7s4+Vuhe+ReTiOxKWen0jErugztraSaWFxQ=="}
+Redirected to http://localhost:3000/welcomes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-08 13:13:01 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <% flash[:errors].each do |key, val| %>
+    15:    <%=val%>
+    16:   <%end%> 
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330092037940'
+Started GET "/welcomes" for ::1 at 2019-05-08 13:13:31 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Wrong credentials! You dun goofed!":String):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <% flash[:notice].each do |key, val| %>
+    15:    <%=val%>
+    16:   <%end%> 
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330108717880'
+Started DELETE "/logout" for ::1 at 2019-05-08 13:13:34 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"LJejoeYnqW8C3yJm7EXnxfSZvV5lbd6IFbBlNH8pk7VdZjjK3BC7s4+Vuhe+ReTiOxKWen0jErugztraSaWFxQ=="}
+Redirected to http://localhost:3000/welcomes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-08 13:13:34 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Wrong credentials! You dun goofed!":String):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <% flash[:notice].each do |key, val| %>
+    15:    <%=val%>
+    16:   <%end%> 
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330127445500'
+Started DELETE "/logout" for ::1 at 2019-05-08 13:14:21 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"LJejoeYnqW8C3yJm7EXnxfSZvV5lbd6IFbBlNH8pk7VdZjjK3BC7s4+Vuhe+ReTiOxKWen0jErugztraSaWFxQ=="}
+Redirected to http://localhost:3000/welcomes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-08 13:14:21 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Wrong credentials! You dun goofed!":String):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <%= flash[:notice].each do |key, val| %>
+    15:    <%=val%>
+    16:   <%end%> 
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330091877420'
+Started GET "/welcomes" for ::1 at 2019-05-08 13:16:36 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Wrong credentials! You dun goofed!":String):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <% flash[:notice].each do |key, val| %>
+    15:    <%= val %>
+    16:   <%end%> 
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330092293680'
+Started GET "/welcomes" for ::1 at 2019-05-08 13:16:55 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-08 13:19:06 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/images/home_page.jpg" for ::1 at 2019-05-08 13:19:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/images/home_page.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2019-05-08 13:19:15 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-08 13:19:16 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-08 13:19:19 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:19:27 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-08 13:19:37 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DdxRfpUIjbtPyldsWJNKGvSrJqGNjn/hc575Xei3KiOO3uL/09+TnJ7m7zCtrgfUX4OZ1AEriKYEQyb6sykYfg==", "user"=>{"username"=>"Rebecca", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Rebecca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 64ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-08 13:19:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2019-05-08 13:19:44 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YeMxcoM1pvjI/0HNa1+X1syN/E2G1WZJr6hs4kWsNSgQEqoZuQK0JEW12bw5X5TxAwbXaZ6bqnoa1tMMcyAjWA==", "user"=>{"username"=>"Rebecca", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Rebecca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/login_form
+Completed 302 Found in 59ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:19:44 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:20:51 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Wrong credentials! You dun goofed!":String):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <% flash[:notice].each do |key, val| %>
+    15:    <%= val %>
+    16:   <%end  %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330153617780'
+Started GET "/login_form" for ::1 at 2019-05-08 13:20:51 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Wrong credentials! You dun goofed!":String):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <% flash[:notice].each do |key, val| %>
+    15:    <%= val %>
+    16:   <%end  %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330092025400'
+Started GET "/login_form" for ::1 at 2019-05-08 13:21:05 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Wrong credentials! You dun goofed!":String):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <%= flash[:notice].each do |key, val| %>
+    15:    <%= val %>
+    16:   <%end  %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330093408220'
+Started GET "/login_form" for ::1 at 2019-05-08 13:22:24 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:22:28 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:22:28 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:22:29 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-08 13:22:32 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IzlRbVQtn3mNYo2vPgJ1XzTu/PVJ6XR1UQhLXL3hrvFSyMoGbhqNpQAoFd5sAnZ4+2XX0VGnuEbkdvSyi224gQ==", "user"=>{"username"=>"Rebecca", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Rebecca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/login_form
+Completed 302 Found in 58ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:22:32 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:22:36 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-08 13:22:41 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iP2zKzQAtCRVkpAh8J3gSNaQsguTjWocEfeVgCjX7n/5DChADjem+NjYCFCineNvGRuZL4vDpi+kiSpuHlv4Dw==", "user"=>{"username"=>"Rebecca", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Rebecca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 61ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-08 13:22:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-05-08 13:23:31 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"xzzgpwiHXt9LUoJQCkhTUslg6EHUQhwzQOk5zYk60k+2zXvMMrBMA8YYGiFYSFB1BuvDZcwM0AD1l4Yjv7bEPw=="}
+Redirected to http://localhost:3000/welcomes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-08 13:23:31 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:23:33 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-08 13:23:36 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oc0tlkj7EIXffyiWQd8ldQeeyx7Qn/om8m31KyqHwa0iz54XDiwOog5TkMq04mi7rLZ0a1w6DWGFsCqMcRnz8A==", "user"=>{"username"=>"Rebecca", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Rebecca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/login_form
+Completed 302 Found in 59ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:23:36 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-08 13:23:54 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pGVjl/wTlebNollOJ+Eh7tZpHzHOgK4tlIU4Ta9DeZHVlPj8xiSHOkDowT914SLJGeI0FdbOYh4h+4ejmc9v4Q==", "user"=>{"username"=>"Rebecca", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Rebecca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 58ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-08 13:23:54 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-05-08 13:25:29 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"V/WOth2ZUgL7iDaeY0pR1fVg6Ej6/XluDCEagXdsyZ4mBBXdJ65A3nbCru8xSlLyOuvDbOKztV25X6VvQeDf7g=="}
+Redirected to http://localhost:3000/welcomes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes" for ::1 at 2019-05-08 13:25:29 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <% flash[:errors].each do |key, val| %>
+    15:     <%= val %>
+    16:     <%end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330109471660'
+Started POST "/login" for ::1 at 2019-05-08 13:25:37 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pGVjl/wTlebNollOJ+Eh7tZpHzHOgK4tlIU4Ta9DeZHVlPj8xiSHOkDowT914SLJGeI0FdbOYh4h+4ejmc9v4Q==", "user"=>{"username"=>"Rebecca", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Rebecca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/login_form
+Completed 302 Found in 69ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:25:37 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Wrong credentials! You dun goofed!":String):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:   <% flash[:errors].each do |key, val| %>
+    15:     <%= val %>
+    16:     <%end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3158579619658878988_70330147182720'
+Started GET "/login_form" for ::1 at 2019-05-08 13:26:53 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-05-08 13:26:58 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FRFkQbUfqJThFx3XLPd69hv1GnVP81pKRDHK6+7gAvpk4P8qjyi6SGxdhaZ+93nR1H4xUVe9lnnxT3UF2GwUig==", "user"=>{"username"=>"Rebecca", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Rebecca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/login_form
+Completed 302 Found in 65ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:26:58 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:28:15 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-08 13:28:36 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
