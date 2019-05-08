@@ -3,7 +3,6 @@ class CityTripsController < ApplicationController
 
     def index
         @my_city_trips = CityTrip.my_trips(session[:user_id])
-        byebug
     end
 
     def show

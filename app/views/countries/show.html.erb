@@ -1,5 +1,8 @@
 <h2> <%= @country.name%> </h2>
-<p> Info: <%= @country.info%> </p>
-<p> Cities: <% @country.country_cities.each do |city|%> 
+
+<strong> Cities: <% @country.country_cities.each do |city|%> 
 <%= link_to city.name, city_path(city) %>
-<%end%> </p>
+<%end%> </strong>
+<br>
+<br>
+<p> Info: <%= @country.info%> </p>
