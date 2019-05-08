@@ -1,7 +1,7 @@
 <%= form_for @trip do |f| %>
   <%= f.label :give_your_trip_a_name %>
   <%= f.text_field :name %><br>
-  <%= f.collection_select(:user_id, User.all, :id, :name) %>
+  <%= f.collection_select(:user_id, User.all, :id, :username) %>
 
   <%= f.submit "Submit" %><br>
 

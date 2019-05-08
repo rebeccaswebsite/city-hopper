@@ -4,8 +4,8 @@ Country.destroy_all
 City.destroy_all
 CityTrip.destroy_all
 
-rebecca = User.create(name: "Rebecca", bio: "Londoner with wanderlust")
-kev = User.create(name: "Kev", bio: "World Cup Enthusiast")
+rebecca = User.create(username: "Rebecca", bio: "Londoner with wanderlust", password: "1234")
+kev = User.create(username: "Kev", bio: "World Cup Enthusiast", password: "password")
 
 winter_break = Trip.create(name: "Winter Break", user: kev)
 summer_holiday = Trip.create(name: "Summer Holiday", user: kev)
