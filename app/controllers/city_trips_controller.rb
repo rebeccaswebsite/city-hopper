@@ -1,10 +1,12 @@
 class CityTripsController < ApplicationController
+    before_action :require_login
 
     def index
-        @city_trips = CityTrip.all
+        @my_city_trips = CityTrip.my_trips(session[:user_id])
+        byebug
     end
 
-    def show 
+    def show
         @city_trip = CityTrip.find(params[:id])
     end
 
@@ -28,7 +30,7 @@ class CityTripsController < ApplicationController
 
     def update
         city_trip = CityTrip.find(params[:id])
-        
+
         city_trip.update(city_trips_params)
         if city_trip.save
             redirect_to city_trip_path(city_trip)
@@ -41,7 +43,13 @@ class CityTripsController < ApplicationController
 
     end
 
+    private
+
     def city_trips_params
         params.require(:city_trip).permit(:trip_id, :city_id)
     end
+
+    def require_login
+     return head(:forbidden) unless session.include? :user_id
+   end
 end
