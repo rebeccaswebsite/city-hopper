@@ -2,10 +2,12 @@
 
 <h2> Your Bio: <%= @user.bio%> </h2>
 
-<h3> <%= link_to "Add a new Trip", new_trip_path %> </h3>
+<h3><%= link_to "See your wishlist", city_trips_path %></h3>
 
-<%= link_to "Edit your Profile", edit_user_path %>
+<h4> <%= link_to "Add a new trip", new_trip_path %> </h4>
 
-<%= button_to "Delete User", {}, { method: :delete } %>
+<%= link_to "Edit your profile", edit_user_path %>
+
+<%= button_to "Delete your profile", {}, { method: :delete } %>
 
 <%= button_to "Logout", {:controller=>"sessions", :action=>"logout"} , { method: :delete } %>
