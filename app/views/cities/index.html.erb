@@ -1,14 +1,9 @@
 <h2>Cities</h2>
-
-
-
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:q, "Search cities by country:") %>
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
 <% end %>
-
-
 
 <ul>
   <% @cities.each do |city| %>
@@ -16,5 +11,3 @@
     </li>
   <% end %>
 </ul>
-
-
