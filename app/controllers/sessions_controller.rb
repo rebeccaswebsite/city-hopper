@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
       redirect_to user_path(user)
     else
-      flash[:notice] = "Wrong credentials! You dun goofed!"
+      flash[:notice] = "Invalid login. Please try again."
       redirect_to "/login_form"
     end
   end

@@ -11,8 +11,4 @@ class CitiesController < ApplicationController
     @city = City.find(params[:id])
   end
 
-  # def search
-  #   @cities = Country.find_by(name: params[:country_name].cities)
-  #   redirect_to country_path(@country)
-  # end
 end

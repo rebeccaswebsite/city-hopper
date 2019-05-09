@@ -4,7 +4,7 @@ RSpec.describe City do
   describe ".by_country_name" do
     context "with an exact country name" do
       it "includes cities with that name" do
-        france = Country.create!(name: "France")
+        france = Country.create!(name: "France") #In Rails an exclamation point means that the method will throw an exception on failure rather than failing silently
         germany = Country.create!(name: "Germany")
         paris = france.cities.create!(name: "Paris")
         berlin = germany.cities.create!(name: "Berlin")

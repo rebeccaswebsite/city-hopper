@@ -5,7 +5,6 @@ class City < ApplicationRecord
   validates :name, :country_id, presence: true
 
   def self.by_country_name(country_name)
-    sanitize_sql_like(country_name)
     joins(:country).where("lower(countries.name) = ?", country_name.downcase)
   end
 
