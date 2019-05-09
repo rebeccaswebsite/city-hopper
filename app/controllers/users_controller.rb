@@ -13,7 +13,8 @@ before_action :authorized?, only: [:show, :edit, :update, :destroy]
     def create
         @user = User.new(user_params)
         if @user.save
-            redirect_to user_path(@user)
+           flash[:notice] = "Please login to confirm your account"
+           redirect_to user_path(@user)
         else
             flash[:errors] = @user.errors.full_messages
             flash[:data] = @user

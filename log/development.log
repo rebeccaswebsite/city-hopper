@@ -21656,3 +21656,2180 @@ Processing by CityTripsController#index as HTML
 Completed 200 OK in 55ms (Views: 43.8ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/users/2" for ::1 at 2019-05-09 16:14:13 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 46ms (Views: 41.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2/edit" for ::1 at 2019-05-09 16:14:16 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 68ms (Views: 61.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/2" for ::1 at 2019-05-09 16:14:22 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZGOR/QNqWwtNZepe3NXjkaa/2SkAYaHgin0+2XlxuHB/PbVh+lK1zuBwFpKC358RDcrCdbY0otz+eqaZo+FSGQ==", "user"=>{"username"=>"Kev", "bio"=>"World Cup Enthusiast", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update profile", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$XQvHxSu7g57bCH3NUIiQYug.40ndIQAygP7STL8VtsME3bZCHtwRW"], ["updated_at", "2019-05-09 15:14:22.812310"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 86ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/2" for ::1 at 2019-05-09 16:14:22 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-05-09 16:14:25 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"WJyCaT9V1bhJl0eVaXzaohe0pIUdXqUswENzD059tXRBq7Ppl8UaKsan5p6wacU6COaNOyKpmPESxtZw3pgGMg=="}
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for ::1 at 2019-05-09 16:14:25 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:14:26 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 64ms (Views: 57.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2019-05-09 16:14:30 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gy64Df+kCAASvfAKOluCaaig2eePR1OYQRJj1RAesymYRkI+yOpwyFH/ngu3b78smkkaFRfsEeXhqUAzJP5XSw==", "user"=>{"username"=>"Kev", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Kev"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 74ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for ::1 at 2019-05-09 16:14:30 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-09 16:14:33 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 68ms (Views: 51.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-09 16:14:34 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (18.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 75ms (Views: 61.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/countries/19" for ::1 at 2019-05-09 16:14:35 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:7
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 19]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (18.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 52ms (Views: 43.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cities" for ::1 at 2019-05-09 16:14:38 +0100
+Processing by CitiesController#index as HTML
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/cities/index.html.erb:9
+  Rendered cities/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 42ms (Views: 36.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cities?utf8=%E2%9C%93&country_name=United+Kingdom&commit=Search" for ::1 at 2019-05-09 16:14:40 +0100
+Processing by CitiesController#index as HTML
+  Parameters: {"utf8"=>"✓", "country_name"=>"United Kingdom", "commit"=>"Search"}
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities" INNER JOIN "countries" ON "countries"."id" = "cities"."country_id" WHERE (lower(countries.name) = 'united kingdom')[0m
+  ↳ app/views/cities/index.html.erb:9
+  Rendered cities/index.html.erb within layouts/application (13.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cities?utf8=%E2%9C%93&country_name=United&commit=Search" for ::1 at 2019-05-09 16:14:43 +0100
+Processing by CitiesController#index as HTML
+  Parameters: {"utf8"=>"✓", "country_name"=>"United", "commit"=>"Search"}
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" INNER JOIN "countries" ON "countries"."id" = "cities"."country_id" WHERE (lower(countries.name) = 'united')[0m
+  ↳ app/views/cities/index.html.erb:9
+  Rendered cities/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cities?utf8=%E2%9C%93&country_name=united+kingdom24&commit=Search" for ::1 at 2019-05-09 16:14:47 +0100
+Processing by CitiesController#index as HTML
+  Parameters: {"utf8"=>"✓", "country_name"=>"united kingdom24", "commit"=>"Search"}
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT "cities".* FROM "cities" INNER JOIN "countries" ON "countries"."id" = "cities"."country_id" WHERE (lower(countries.name) = 'united kingdom24')[0m
+  ↳ app/views/cities/index.html.erb:9
+  Rendered cities/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cities?utf8=%E2%9C%93&country_name=Berlin&commit=Search" for ::1 at 2019-05-09 16:14:51 +0100
+Processing by CitiesController#index as HTML
+  Parameters: {"utf8"=>"✓", "country_name"=>"Berlin", "commit"=>"Search"}
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" INNER JOIN "countries" ON "countries"."id" = "cities"."country_id" WHERE (lower(countries.name) = 'berlin')[0m
+  ↳ app/views/cities/index.html.erb:9
+  Rendered cities/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 36ms (Views: 31.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-09 16:14:53 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-09 16:14:54 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 51ms (Views: 38.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/2" for ::1 at 2019-05-09 16:14:55 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 98ms (Views: 92.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/2" for ::1 at 2019-05-09 16:15:03 +0100
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eHs1XF3LJczwROdt5dSu6yRgtztCZE36U2OuDA+nVxZRy7tFdfhRoq14fX5n1E1s8Aos9LWMC4w/i9TUDL7x7A==", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 13ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/welcome" for ::1 at 2019-05-09 16:15:03 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:15:06 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 45ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/images/home_page.jpg" for ::1 at 2019-05-09 16:15:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/images/home_page.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-05-09 16:15:20 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uyIDnal8Duh860Nny9naaNyOwsKY5Qxryo/7aqfKgX5N8XgrctIJzhtdlmsJ/jwjAlaLOoi3VqQIlyc/CtWDDg==", "user"=>{"username"=>"Kev", "bio"=>"Yoo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Kev"], ["bio", "Yoo"], ["created_at", "2019-05-09 15:15:20.956998"], ["updated_at", "2019-05-09 15:15:20.956998"], ["password_digest", "$2a$10$vz4Wp792lRYKR.IpKzPrUelxOsrEYLa3vB8t/kFjNgwPQjkUEeU/C"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 80ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/2" for ::1 at 2019-05-09 16:15:20 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 77ms (Views: 73.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-09 16:15:22 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 53ms (Views: 42.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-09 16:15:31 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 53ms (Views: 45.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/2" for ::1 at 2019-05-09 16:15:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 55ms (Views: 50.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/2" for ::1 at 2019-05-09 16:15:56 +0100
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Z/pypOsd949i+3SfqHl3OC9rEE34CRduQNdqqFfVQ3pOSvy9wy6D4T/H7owqeZS/+wGLgg/hURgsPxBwVMzlgA==", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/welcome" for ::1 at 2019-05-09 16:15:56 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:15:59 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 48ms (Views: 43.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/images/home_page.jpg" for ::1 at 2019-05-09 16:15:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/images/home_page.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-05-09 16:16:11 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DzxospRyG0pRov07pVqTAlhnot34JyxeCnHje6xBAfL57xMET9wcbDYUKDdnfXVJhr/rJeh1dpHIaT8uAV4Dgg==", "user"=>{"username"=>"Lucy", "bio"=>"TCF extraordinaire", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Lucy"], ["bio", "TCF extraordinaire"], ["created_at", "2019-05-09 15:16:11.320946"], ["updated_at", "2019-05-09 15:16:11.320946"], ["password_digest", "$2a$10$FVPlVUjCnxZz0jzTMiC6lOwQ9BrzGQeZk7Kmk89EnzlsrgOqBK5Ey"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 83ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/2" for ::1 at 2019-05-09 16:16:11 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-09 16:16:13 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 43ms (Views: 36.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/city_trips/22" for ::1 at 2019-05-09 16:16:21 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mCityTrip Load (0.4ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 52ms (Views: 46.3ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/city_trips/22" for ::1 at 2019-05-09 16:16:22 +0100
+Processing by CityTripsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"59LcQ6RLGym5Qfevlt9rpvg++TL1VomrUdNiJgFAGrglkLbVxJP2Spie42nH+3sl44tkdBudJiFizYun7qoBFw==", "id"=>"22"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:43
+  [1m[36mCityTrip Destroy (1.2ms)[0m  [1m[31mDELETE FROM "city_trips" WHERE "city_trips"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/city_trips_controller.rb:43
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:43
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/welcome" for ::1 at 2019-05-09 16:16:22 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 48ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-09 16:16:24 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  Rendered city_trips/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 52ms (Views: 43.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/2" for ::1 at 2019-05-09 16:17:10 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-05-09 16:17:13 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"+JZ77srev64hWzlqi5f1GKYOqPSgWF0qnJToEOVQMSBu8MPGNbb+I0ni41jZnwuVlCrxP4y9gueIeY+kj6uQoA=="}
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for ::1 at 2019-05-09 16:17:13 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:17:16 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/images/home_page.jpg" for ::1 at 2019-05-09 16:17:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/images/home_page.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-05-09 16:17:25 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BODSBlLVq/9qvsybSw0RNFNKRcEL4ruNRSB+zdfREkTyM6mwiXus2Q0IGZeJKvd/jZIMORuw4UKHOKKYes4QNA==", "user"=>{"username"=>"Kev", "bio"=>"heyyy", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Kev"], ["bio", "heyyy"], ["created_at", "2019-05-09 15:17:25.242340"], ["updated_at", "2019-05-09 15:17:25.242340"], ["password_digest", "$2a$10$j90CIVuZyqwPYhR1yjPowOlJEZMYLXsJ.guhrhIp10rz5ZaDSngfO"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 82ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/3" for ::1 at 2019-05-09 16:17:25 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:17:25 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:17:35 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oau/Np4Zo6jaSdJelvARYCtCqoZtHhSDvhQuJrlEyhAgnI62NolsOlV5c1VP5Q74NBCDOFLpKV5skYtZKaF5Vg==", "user"=>{"username"=>"Kev", "bio"=>"heyyy", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Kev"], ["bio", "heyyy"], ["created_at", "2019-05-09 15:17:35.408212"], ["updated_at", "2019-05-09 15:17:35.408212"], ["password_digest", "$2a$10$arhmTyaAWXyEPd0wl2nS6ed5.wIkCl.uVH8YzSuU8tGjtw/25leP6"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 81ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/4" for ::1 at 2019-05-09 16:17:35 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:17:35 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:17:43 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oau/Np4Zo6jaSdJelvARYCtCqoZtHhSDvhQuJrlEyhAgnI62NolsOlV5c1VP5Q74NBCDOFLpKV5skYtZKaF5Vg==", "user"=>{"username"=>"Kevin", "bio"=>"heyyy", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:17:43 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:17:52 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vqdSHsFopur+QMgMop1zP0Q5AYHasgIcSZ0mq+gxT6+nkGOeafhpeHFwaQd7iGynW2soP+VFP8GbGIPUeNT86Q==", "user"=>{"username"=>"Kevin", "bio"=>"hi", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Kevin"], ["bio", "hi"], ["created_at", "2019-05-09 15:17:52.912667"], ["updated_at", "2019-05-09 15:17:52.912667"], ["password_digest", "$2a$10$rZXRVpkzz0lsaRdvXVy48e/yNZDfmesaIsJCLRGOz8OU2efozazxu"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 82ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users/5" for ::1 at 2019-05-09 16:17:52 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:17:52 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:20:07 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 73ms (Views: 55.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:20:17 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZrAdxbsKL0eT1EBCVQfVc5vbGJfHhkJBn2Ls9vz7ILqQY2ZzYKQoYfRilU6XIDM4RQNRb9fUGI5dejCjUeQiyg==", "user"=>{"username"=>"Kevin", "bio"=>"hey", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Kevin"], ["bio", "hey"], ["created_at", "2019-05-09 15:20:18.039997"], ["updated_at", "2019-05-09 15:20:18.039997"], ["password_digest", "$2a$10$ya22.zRz0nuwCRO2P1C70Ose8fm0dNAY3YTSTPxT5dB9ly5XXY4dm"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 88ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/6" for ::1 at 2019-05-09 16:20:18 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:20:18 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2019-05-09 16:20:27 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZGUr9L9hhXhf+1A2Z8prw+fIWGHsDLj1CsJFsbWvu7d9Uhp0F/FK6tDL8T2+33Rb+Jpx39P7hSjYR+DOJUoI8Q==", "user"=>{"username"=>"Kevin", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Kevin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 73ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/5" for ::1 at 2019-05-09 16:20:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 26.5ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started DELETE "/logout" for ::1 at 2019-05-09 16:21:36 +0100
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"oXTDws4JefXuYc+GJNnHgb4u+B/dPQCAVz+g6p5hjx+4Q/JCZpm2Z2FRbo39zNgZoXzRoeLKPV2FugWVDoQ8WQ=="}
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for ::1 at 2019-05-09 16:21:36 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 69ms (Views: 60.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:21:38 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 53ms (Views: 34.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/images/home_page.jpg" for ::1 at 2019-05-09 16:21:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/images/home_page.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-05-09 16:21:49 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VWbjCnG8EFJLUsV3miYqBcKbt5tErzXJKjem3gW0+TqjtZi8qhIXdCzkEHtYAcxOHEP+Y1T9bwboL3qLqKv7Sg==", "user"=>{"username"=>"Amy", "bio"=>"sis", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Amy"], ["bio", "sis"], ["created_at", "2019-05-09 15:21:50.061515"], ["updated_at", "2019-05-09 15:21:50.061515"], ["password_digest", "$2a$10$Hxpl8uzJkFByiyvbFNQe.eMruFTSGqpiAzDpStGZDPgJ.vfpEFMtG"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 45548ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/7" for ::1 at 2019-05-09 16:22:35 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/7" for ::1 at 2019-05-09 16:22:35 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:22:35 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:22:35 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 168ms (Views: 164.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2019-05-09 16:23:24 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cv7VwQnIS0Vk1ORDicdhKswJUWxTgmeT1yFohFZDg9pryeRBoViE1+vkRUhQ0n6y01t40mx1Wk4FpM37xqYwnA==", "user"=>{"username"=>"Amy", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Amy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 83ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/7" for ::1 at 2019-05-09 16:23:24 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/7" for ::1 at 2019-05-09 16:26:09 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 103ms (Views: 61.5ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/7" for ::1 at 2019-05-09 16:26:12 +0100
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+XuQD6md4Z/gqAOQPnWmykj5K03LSJ/O5YfTgdHKxe7gTKGPAQ0uDW+YopvnYLlSV6sC8/S/ohM3Anb+QS92qA==", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/welcome" for ::1 at 2019-05-09 16:26:12 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 115ms (Views: 113.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:26:14 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 79ms (Views: 74.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/images/home_page.jpg" for ::1 at 2019-05-09 16:26:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/images/home_page.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-05-09 16:26:24 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r2goFNJswkcAmfDXgPaekeGY5KNFvXL81wQoMHTivuFZu1OiCcLFYWcvJdtC0XjaP0CtW1XvKDMVHPRl2f28kQ==", "user"=>{"username"=>"Amy", "bio"=>"sis", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Amy"], ["bio", "sis"], ["created_at", "2019-05-09 15:26:24.698927"], ["updated_at", "2019-05-09 15:26:24.698927"], ["password_digest", "$2a$10$cbbA.oasUJZAB3qYL3yqhu1R896w9RP/pgVzqDEllUsrvvOFR8wve"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 202ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:26:56 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 143ms (Views: 91.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:27:05 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DyMreHaRVgWad5zlm7q7ODUAyJve/vCXbFmgoIhW83wWFBr43gGZlxVHPe5Cr6SgKlLhJeEJzUq+3AXfGLNAOg==", "user"=>{"username"=>"Amy", "bio"=>"sis", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (9.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Amy"], ["bio", "sis"], ["created_at", "2019-05-09 15:27:05.136754"], ["updated_at", "2019-05-09 15:27:05.136754"], ["password_digest", "$2a$10$J4Lg8L54illXUnSmWuYQAeEiRxixbDAvNs5zHDRp.t74CDaMP4/4a"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 186ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:27:24 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 122ms (Views: 98.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:27:32 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6F6X6vMgjdZOrwXDOWb5yeHDeFKIncTdy6CzzMNy3svxaaZqW7BCRMGfpMjgc+ZR/pFR7Ldq+QAZJRazU5dtjQ==", "user"=>{"username"=>"Amy", "bio"=>"sis", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Amy"], ["bio", "sis"], ["created_at", "2019-05-09 15:27:32.799224"], ["updated_at", "2019-05-09 15:27:32.799224"], ["password_digest", "$2a$10$pdlSftVwQ1i8gopaiS8xC.5qYE5JmzzUzA5vIG9vbZlLsI2vqRHSS"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 92ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/9" for ::1 at 2019-05-09 16:27:32 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/users/7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/7" for ::1 at 2019-05-09 16:27:32 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/7" for ::1 at 2019-05-09 16:27:59 +0100
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cgW5NWMYKAhV7bjDTDAgK+FQIdrJp/VkSnDjJOSc+cJrMoi1y4jnmtrdGciVJT+z/gIIZPZQyLmY9UZbdHlKhA==", "id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 70ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/welcome" for ::1 at 2019-05-09 16:27:59 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (22.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 189ms (Views: 184.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:28:02 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 131ms (Views: 103.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/images/home_page.jpg" for ::1 at 2019-05-09 16:28:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/images/home_page.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-05-09 16:28:37 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ngGFbHaxITXiW4BKIVzNZzXrbVtpUq7+GMEQLXfYjmRo0v7arR8mE4XtVUbjeyss6zMko3kA9DHa2cx42seMFA==", "user"=>{"username"=>"Ruby", "bio"=>"kev's sis", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Ruby"], ["bio", "kev's sis"], ["created_at", "2019-05-09 15:28:37.946272"], ["updated_at", "2019-05-09 15:28:37.946272"], ["password_digest", "$2a$10$CjndyuoiCl3pVmlH5j3QRedpxJkjLAeGmzM8b8GSxKxgGmD7/1nr6"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 87ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users/10" for ::1 at 2019-05-09 16:28:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:28:37 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 96ms (Views: 92.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:29:06 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 94ms (Views: 63.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:29:16 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dB6WsShPNkc7kcR7fT1AVV5Mk2kIQKnsAgQDpgHWs2eCze0H8+ExYVwnEXe/GqYegJTakRgS8yPAHN/zrMmxFw==", "user"=>{"username"=>"Charlotte", "bio"=>"other sis", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Charlotte"], ["bio", "other sis"], ["created_at", "2019-05-09 15:29:16.807198"], ["updated_at", "2019-05-09 15:29:16.807198"], ["password_digest", "$2a$10$W1/jvV/7Jg/YkdvyoPPOheYAhWaBPOteqlwqEytT8fZhCEuxidRUC"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 93ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/11" for ::1 at 2019-05-09 16:29:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:29:16 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 90ms (Views: 88.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:29:31 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 77ms (Views: 70.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:29:45 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jKH4BHzACbH33oCn/gqqmkuri1E6t7hG9bkdcD34OEx6coOyp24Ol5BoVas8LUzRlXPCqSrl4ok3ocElkOc6PA==", "user"=>{"username"=>"Randy", "bio"=>"bro", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Randy"], ["bio", "bro"], ["created_at", "2019-05-09 15:29:45.391044"], ["updated_at", "2019-05-09 15:29:45.391044"], ["password_digest", "$2a$10$F6mIjNwAGJwG.SpX7bpM4efEbRlrsDs30sZ31Vo0tfQvAR099HDci"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 88ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users/12" for ::1 at 2019-05-09 16:29:45 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:29:45 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 47ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:30:18 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 71ms (Views: 52.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:30:28 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PB/BYnQh59JTv9XKErbmfu1k5y4peJOnOZt2NMa+lMjKzLrUr4/g9DQJAMbQkQA1M7yu1jkqyWj7g6pha6GWuA==", "user"=>{"username"=>"Aydie", "bio"=>"bro", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Aydie"], ["bio", "bro"], ["created_at", "2019-05-09 15:30:28.370375"], ["updated_at", "2019-05-09 15:30:28.370375"], ["password_digest", "$2a$10$928Nigrzo32aw3wFqngAteb2YjVWAFVSi703phRbeEZlW0hDxRXOW"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 90ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users/13" for ::1 at 2019-05-09 16:30:28 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:30:28 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 81ms (Views: 78.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:30:45 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (10.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 139ms (Views: 115.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:31:06 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x9D+OV8dOTWu2AAD7K0ewlltdFRobj+MEQXHNZ5enDcxA4WPhLM+E8lu1Q8uiviJh7U9rHg8ZUPTHRtgM0GeRw==", "user"=>{"username"=>"Faby", "bio"=>"siski", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Faby"], ["bio", "siski"], ["created_at", "2019-05-09 15:31:06.875849"], ["updated_at", "2019-05-09 15:31:06.875849"], ["password_digest", "$2a$10$gpB62hETr.1fzpI6Z.xIhedbmwppFEua.l0HesSR/k0oZ7ZQl05Se"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/14
+Completed 302 Found in 95ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/14" for ::1 at 2019-05-09 16:31:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:31:06 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 100ms (Views: 82.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:31:42 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 123ms (Views: 118.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:32:02 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"28Onuam0VX8xYnTis3wTjoNnPuC4i+IdimHR3/9P/eAtENwPchpSWVbUoe5xW/XFXb93GKjZuNJIeQ2KUlD/kA==", "user"=>{"username"=>"Crystal", "bio"=>"cousin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Crystal"], ["bio", "cousin"], ["created_at", "2019-05-09 15:32:02.741110"], ["updated_at", "2019-05-09 15:32:02.741110"], ["password_digest", "$2a$10$vXVDxMHGqo7lkTb4G.diGuvn0qgT./I.j0EWstKyUH5k/mJUuAnlq"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/15
+Completed 302 Found in 92ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/15" for ::1 at 2019-05-09 16:32:02 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:32:02 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 94ms (Views: 90.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:34:11 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 73ms (Views: 54.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:34:21 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MnqBXCwWP2lYXcYt2iy13B1lWPs4OqDPSS2OAYaqtHnEqfrq97g4Tz/rEyEYC1OXw70RAyho+gCLNVJUK7W2CQ==", "user"=>{"username"=>"Pearl", "bio"=>"cus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Pearl"], ["bio", "cus"], ["created_at", "2019-05-09 15:34:21.444919"], ["updated_at", "2019-05-09 15:34:21.444919"], ["password_digest", "$2a$10$j/JfB3nUJ59stg1q2HICmO50dYC6abMXfDCMFe722TTsgMHUgx1c."]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/16
+Completed 302 Found in 91ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users/16" for ::1 at 2019-05-09 16:34:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:34:21 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 61ms (Views: 58.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome" for ::1 at 2019-05-09 16:34:58 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:35:55 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 82ms (Views: 73.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-09 16:35:58 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 109ms (Views: 102.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for ::1 at 2019-05-09 16:36:23 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hEGy47DERPuSjIIyB8Q2dGPTaN6MpOukS4XVCbIi1ARykslVa2pD3fU6Vz7F49A/vQshJpz2sWuJnQlcHz3WdA==", "user"=>{"username"=>"Manu", "bio"=>"idontknow", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Manu"], ["bio", "idontknow"], ["created_at", "2019-05-09 15:36:23.683844"], ["updated_at", "2019-05-09 15:36:23.683844"], ["password_digest", "$2a$10$TYhFLMxPdnJJXuqZlshSq.8YfgttazYVhtMr1f.mzDa915n7l186K"]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 93ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/17" for ::1 at 2019-05-09 16:36:23 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login_form
+Filter chain halted as :authorized? rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login_form" for ::1 at 2019-05-09 16:36:23 +0100
+Processing by SessionsController#login_form as HTML
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 91ms (Views: 89.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2019-05-09 16:36:28 +0100
+Processing by SessionsController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"69gAESOESNn6odZCxkKtyziyUFniOXdyc+jRvpGreMny7zGRixSHS3WRd0kfV7JTJ+B5593OSq+hbXTBAU7Ljw==", "user"=>{"username"=>"Manu", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Manu"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 79ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/17" for ::1 at 2019-05-09 16:36:29 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 53ms (Views: 46.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-09 16:36:33 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  Rendered trips/_form.html.erb (3.6ms)
+  Rendered trips/new.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 67ms (Views: 44.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-09 16:36:45 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zZaZIutIMGqC0FfyCJ6mZTc8Oi1iXIR4tkqAehl6OT7Bo+ieEbZs/9ip2sdkVY6N+DVnP5V4yFDO+18PChndCQ==", "trip"=>{"name"=>"trip"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (1.3ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "trip"], ["user_id", 17], ["created_at", "2019-05-09 15:36:45.717144"], ["updated_at", "2019-05-09 15:36:45.717144"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+Redirected to http://localhost:3000/trips/40
+Completed 302 Found in 16ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/trips/40" for ::1 at 2019-05-09 16:36:45 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mTrip Load (1.7ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (3.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 107ms (Views: 97.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:36:50 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/city_trips/_form.html.erb:2
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (34.1ms)
+  Rendered city_trips/new.html.erb within layouts/application (38.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 104ms (Views: 73.7ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/city_trips" for ::1 at 2019-05-09 16:37:15 +0100
+Processing by CityTripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qUoxsQqRgDd8OILs81wiHsT71i56PC3A5DdKp3Q21ClB3y4usRZ47NrbN7K/sJXxjSchHabpNdFaKKtjRUdE2w==", "city_trip"=>{"trip_id"=>"40", "city_id"=>"29"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:18
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:18
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:18
+  [1m[36mCityTrip Create (1.1ms)[0m  [1m[32mINSERT INTO "city_trips" ("trip_id", "city_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 40], ["city_id", 29], ["created_at", "2019-05-09 15:37:15.152063"], ["updated_at", "2019-05-09 15:37:15.152063"]]
+  ↳ app/controllers/city_trips_controller.rb:18
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:19
+Redirected to http://localhost:3000/city_trips/24
+Completed 302 Found in 26ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/city_trips/24" for ::1 at 2019-05-09 16:37:15 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mCityTrip Load (0.7ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 64ms (Views: 56.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-09 16:37:24 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 52ms (Views: 46.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-09 16:37:32 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 98ms (Views: 88.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/countries" for ::1 at 2019-05-09 16:37:36 +0100
+Processing by CountriesController#index as HTML
+  Rendering countries/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/countries/index.html.erb:4
+  Rendered countries/index.html.erb within layouts/application (18.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 69ms (Views: 52.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/countries/19" for ::1 at 2019-05-09 16:37:48 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:7
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 19]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 75ms (Views: 70.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/countries/20" for ::1 at 2019-05-09 16:37:53 +0100
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:7
+  Rendering countries/show.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities" WHERE "cities"."country_id" = ?[0m  [["country_id", 20]]
+  ↳ app/models/country.rb:6
+  Rendered countries/show.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 81ms (Views: 77.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cities" for ::1 at 2019-05-09 16:37:55 +0100
+Processing by CitiesController#index as HTML
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/cities/index.html.erb:9
+  Rendered cities/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 68ms (Views: 62.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/17" for ::1 at 2019-05-09 16:47:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 100ms (Views: 93.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-09 16:47:40 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  Rendered trips/_form.html.erb (3.8ms)
+  Rendered trips/new.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 105ms (Views: 101.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-09 16:47:42 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W6QvzFw1YAJJ2TcmU8HE1HfYJWOQmQJNQx6bJreV3B9XkV5wpss8lxOguhM/Cuw8uNF4cWe9TmU7r0RTpPY4KA==", "trip"=>{"name"=>"gvhbjnkm"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (2.4ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "gvhbjnkm"], ["user_id", 17], ["created_at", "2019-05-09 15:47:42.730519"], ["updated_at", "2019-05-09 15:47:42.730519"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+Redirected to http://localhost:3000/trips/41
+Completed 302 Found in 14ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/trips/41" for ::1 at 2019-05-09 16:47:42 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (4.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 72ms (Views: 67.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:47:44 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/city_trips/_form.html.erb:2
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (8.7ms)
+  Rendered city_trips/new.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 80ms (Views: 74.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:51:01 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <strong> Your trip: <%= @trip.name %> </strong>
+    2: 
+    3: <%= render "form"%>
+  
+app/views/city_trips/new.html.erb:1:in `_app_views_city_trips_new_html_erb__2488421557702356539_70175427402540'
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:53:04 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `trip_name' for nil:NilClass):
+    1: <strong> Your trip: <%= @citytrip.trip_name %> </strong>
+    2: 
+    3: <%= render "form"%>
+  
+app/views/city_trips/new.html.erb:1:in `_app_views_city_trips_new_html_erb__2488421557702356539_70175426349760'
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:53:32 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `trip_name' for nil:NilClass):
+    1: <strong> Your trip: <%= @citytrip.trip_name %> </strong>
+    2: 
+    3: <%= render "form"%>
+  
+app/views/city_trips/new.html.erb:1:in `_app_views_city_trips_new_html_erb__2488421557702356539_70175428088640'
+Started GET "/welcomes" for ::1 at 2019-05-09 16:53:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/welcomes"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/welcome" for ::1 at 2019-05-09 16:53:41 +0100
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 99ms (Views: 93.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-09 16:53:44 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 92ms (Views: 50.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/17" for ::1 at 2019-05-09 16:53:45 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/new" for ::1 at 2019-05-09 16:53:47 +0100
+Processing by TripsController#new as HTML
+  Rendering trips/new.html.erb within layouts/application
+  Rendered trips/_form.html.erb (5.8ms)
+  Rendered trips/new.html.erb within layouts/application (12.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 63ms (Views: 58.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/trips" for ::1 at 2019-05-09 16:53:50 +0100
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3OUaNU3GbHxWWlwTvRX975HL2SE2t51i5LZ09zj+kDbQ0GuJtzgw6Qwj0SbR3tUHXsKEM8GT0UqcB6uCK510AQ==", "trip"=>{"name"=>"Tripin"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[36mTrip Create (1.0ms)[0m  [1m[32mINSERT INTO "trips" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tripin"], ["user_id", 17], ["created_at", "2019-05-09 15:53:50.580876"], ["updated_at", "2019-05-09 15:53:50.580876"]]
+  ↳ app/controllers/trips_controller.rb:12
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trips_controller.rb:12
+Redirected to http://localhost:3000/trips/42
+Completed 302 Found in 19ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/trips/42" for ::1 at 2019-05-09 16:53:50 +0100
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (4.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 59ms (Views: 54.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:53:52 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `trip_name' for nil:NilClass):
+    1: <strong> Your trip: <%= @citytrip.trip_name %> </strong>
+    2: 
+    3: <%= render "form"%>
+  
+app/views/city_trips/new.html.erb:1:in `_app_views_city_trips_new_html_erb__2488421557702356539_70175394828680'
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:55:18 +0100
+  
+SyntaxError (/Users/rebecca/Desktop/Development/Mod-2/Project/mod-2-project/app/controllers/city_trips_controller.rb:51: syntax error, unexpected ')', expecting =>
+...d: session[:trip_id], :city_id)
+...                              ^
+/Users/rebecca/Desktop/Development/Mod-2/Project/mod-2-project/app/controllers/city_trips_controller.rb:57: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/city_trips_controller.rb:51: syntax error, unexpected ')', expecting =>
+app/controllers/city_trips_controller.rb:57: syntax error, unexpected end-of-input, expecting end
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:56:12 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `trip_name' for nil:NilClass):
+    1: <strong> Your trip: <%= @citytrip.trip_name %> </strong>
+    2: 
+    3: <%= render "form"%>
+  
+app/views/city_trips/new.html.erb:1:in `_app_views_city_trips_new_html_erb__2488421557702356539_70175427861140'
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:56:37 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `trip_name' for nil:NilClass):
+    1: <strong> Your trip: <%= @citytrip.trip_name %> </strong>
+    2: 
+    3: <%= render "form"%>
+  
+app/views/city_trips/new.html.erb:1:in `_app_views_city_trips_new_html_erb__2488421557702356539_70175429508820'
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:56:51 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered city_trips/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `trip' for nil:NilClass):
+    1: <strong> Your trip: <%= @citytrip.trip.name %> </strong>
+    2: 
+    3: <%= render "form"%>
+  
+app/views/city_trips/new.html.erb:1:in `_app_views_city_trips_new_html_erb__2488421557702356539_70175393113220'
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:57:06 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  [1m[36mTrip Load (1.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ app/views/city_trips/_form.html.erb:2
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (124.8ms)
+  Rendered city_trips/new.html.erb within layouts/application (127.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 224ms (Views: 213.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:57:26 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:2
+  Rendered city_trips/_form.html.erb (3.0ms)
+  Rendered city_trips/new.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 99ms (Views: 96.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:58:12 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:2
+  Rendered city_trips/_form.html.erb (27.7ms)
+  Rendered city_trips/new.html.erb within layouts/application (29.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 138ms (Views: 118.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:58:27 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:2
+  Rendered city_trips/_form.html.erb (23.0ms)
+  Rendered city_trips/new.html.erb within layouts/application (26.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 114ms (Views: 96.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:58:34 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:2
+  Rendered city_trips/_form.html.erb (4.2ms)
+  Rendered city_trips/new.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 108ms (Views: 104.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 16:58:48 +0100
+Processing by CityTripsController#new as HTML
+Started GET "/trips/42" for ::1 at 2019-05-09 17:24:19 +0100
+Started GET "/trips/42" for ::1 at 2019-05-09 17:24:19 +0100
+  Rendering city_trips/new.html.erb within layouts/application
+Started GET "/trips/42" for ::1 at 2019-05-09 17:24:19 +0100
+Started GET "/city_trips/new" for ::1 at 2019-05-09 17:24:19 +0100
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:2
+  Rendered city_trips/_form.html.erb (93.9ms)
+  Rendered city_trips/new.html.erb within layouts/application (99.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 1531438ms (Views: 222.5ms | ActiveRecord: 5.9ms)
+
+
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+Processing by CityTripsController#new as HTML
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"42"}
+Started GET "/login_form" for ::1 at 2019-05-09 17:24:20 +0100
+  Rendering trips/show.html.erb within layouts/application
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+Processing by SessionsController#login_form as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (159.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (130.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (152.5ms)
+  Rendering sessions/login_form.html.erb within layouts/application
+  Rendering city_trips/new.html.erb within layouts/application
+  Rendered sessions/login_form.html.erb within layouts/application (2.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 379ms (Views: 342.3ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 437ms (Views: 398.1ms | ActiveRecord: 1.9ms)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 426ms (Views: 408.2ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 304ms (Views: 295.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mCity Load (2.9ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+Started GET "/trips/42" for ::1 at 2019-05-09 17:24:20 +0100
+  ↳ app/views/city_trips/_form.html.erb:2
+  Rendered city_trips/_form.html.erb (197.7ms)
+  Rendered city_trips/new.html.erb within layouts/application (256.5ms)
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/trips_controller.rb:3
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/trips/show.html.erb:2
+  Rendered trips/show.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 627ms (Views: 487.0ms | ActiveRecord: 6.9ms)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 171ms (Views: 162.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 17:24:24 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:2
+  Rendered city_trips/_form.html.erb (7.2ms)
+  Rendered city_trips/new.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 115ms (Views: 111.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/city_trips/new" for ::1 at 2019-05-09 17:25:18 +0100
+Processing by CityTripsController#new as HTML
+Completed 404 Not Found in 12ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Trip without an ID):
+  
+app/controllers/city_trips_controller.rb:13:in `new'
+Started GET "/city_trips/new" for ::1 at 2019-05-09 17:34:09 +0100
+Processing by CityTripsController#new as HTML
+  Rendering city_trips/new.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:2
+  Rendered city_trips/_form.html.erb (14.3ms)
+  Rendered city_trips/new.html.erb within layouts/application (16.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 111ms (Views: 88.9ms | ActiveRecord: 4.4ms)
+
+
