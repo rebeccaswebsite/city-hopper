@@ -9,8 +9,6 @@ class ApplicationController < ActionController::Base
     current_user != nil
   end
 
-  
-
   def authorized?
     if !logged_in?
       flash[:authorized] = "You are not logged in"

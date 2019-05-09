@@ -11,7 +11,7 @@
 
     <nav class="navbar navbar-light bg-light">
 
-        <%= link_to(image_tag("/images/logo.png", :alt=>"Logo Image", :class=>"img-fluid rounded"), welcomes_path) %>
+        <%= link_to(image_tag("/images/logo.png", :alt=>"Logo Image", :class=>"img-fluid rounded"), welcome_path) %>
 
         <% if logged_in? %>
           <%= link_to "My Profile", user_path(current_user.id), :class=>"navbar-brand" %>

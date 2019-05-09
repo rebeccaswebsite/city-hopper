@@ -8,8 +8,7 @@ class TripsController < ApplicationController
   end
 
   def create
-      @trip = Trip.new(trip_params)
-
+      @trip = Trip.new(name: params[:trip][:name], user_id: session[:user_id])
       if @trip.save
           redirect_to trip_path(@trip)
         else
@@ -25,8 +24,7 @@ class TripsController < ApplicationController
 
   def update
       trip = Trip.find(params[:id])
-
-      trip.update(trip_params)
+      trip.update(name: params[:trip][:name], user_id: session[:user_id])
       if trip.save
           redirect_to trip_path(trip)
     else
@@ -39,12 +37,7 @@ class TripsController < ApplicationController
   def destroy
       @trip = Trip.find(params[:id])
       @trip.destroy
-      redirect_to welcomes_path
+      redirect_to city_trips_path
   end
 
-  private
-
-  def trip_params
-      params.require(:trip).permit(:name, :user_id)
-  end
 end

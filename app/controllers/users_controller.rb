@@ -43,7 +43,7 @@ before_action :authorized?, only: [:show, :edit, :update, :destroy]
         @user = User.find(params[:id])
         @user.destroy
         flash[:notice] = "Your profile has been deleted."
-        redirect_to welcomes_path
+        redirect_to welcome_path
     end
 
     private
