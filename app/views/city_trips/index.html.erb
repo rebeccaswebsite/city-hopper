@@ -1,7 +1,7 @@
 <% @my_city_trips.each do |ct| %>
   <ul>
     <li>
-      Trip Name: <%= ct.trip_name %>
+      Trip Name: <%= link_to ct.trip_name, city_trip_path(ct) %>
     </li>
     <li>
       City Name: <%= ct.city_name %>
