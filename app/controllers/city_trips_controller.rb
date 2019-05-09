@@ -39,7 +39,10 @@ class CityTripsController < ApplicationController
     end
 
     def destroy
-
+      city_trip = CityTrip.find(params[:id])
+      city_trip.destroy
+      flash[:notice] = "Your wishlist item has been deleted."
+      redirect_to welcome_path
     end
 
     private
