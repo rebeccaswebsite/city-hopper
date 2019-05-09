@@ -11,3 +11,7 @@
 <%= button_to "Delete your profile", {}, { method: :delete } %>
 
 <%= button_to "Logout", {:controller=>"sessions", :action=>"logout"} , { method: :delete } %>
+
+<%= flash[:authorized]%>
+
+<%= flash[:notice]%>

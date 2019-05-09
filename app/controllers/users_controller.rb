@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+before_action :authorized?, only: [:show, :edit, :update, :destroy]
 
     def show
+        authorized_for(params[:id])
         @user = User.find(params[:id])
     end
 
@@ -20,6 +22,7 @@ class UsersController < ApplicationController
     end
 
     def edit
+        authorized_for(params[:id])
         @user = User.find(params[:id])
     end
 
@@ -39,7 +42,7 @@ class UsersController < ApplicationController
     def destroy
         @user = User.find(params[:id])
         @user.destroy
-        # flash[:notice] = "Your profile has been deleted."
+        flash[:notice] = "Your profile has been deleted."
         redirect_to welcomes_path
     end
 
