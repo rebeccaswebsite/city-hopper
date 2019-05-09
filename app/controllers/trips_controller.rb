@@ -37,6 +37,7 @@ class TripsController < ApplicationController
   def destroy
       @trip = Trip.find(params[:id])
       @trip.destroy
+      flash[:notice] = "Your trip has been deleted."
       redirect_to city_trips_path
   end
 
