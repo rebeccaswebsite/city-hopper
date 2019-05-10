@@ -3,29 +3,32 @@ require 'json'
 require 'rest-client'
 
 class API
-  URL = "https://restcountries.eu/rest/v2/all"
+  URL = "https://restcountries.eu/rest/v2/all?fields=name;capital"
 
   def get_countries_and_cities
     response = RestClient.get(URL)
     hash = JSON.parse(response)
+    hash[2]
   end
 
-  def parse_event_information(raw_data)
+  def parse_countries(raw_data)
     countries_hash = {}
 
-    raw_data.each do |country, info|
-      binding.pry
-      "hi"
-      country.each do |key, value|
-        binding.pry
-        "hi"
-        countries_hash[:name] = info[:name]
-        countries_hash[:capital] = info[:capital]
-
-      end
+    raw_data.each do |key, value|
+        countries_hash[:name] = raw_data["name"]
     end
     countries_hash
+    binding.pry
+  end
 
+  def parse_cities(raw_data)
+    cities_hash = {}
+
+    raw_data.each do |key, value|
+        cities_hash[:name] = raw_data["capital"]
+    end
+    cities_hash
+    binding.pry
   end
 
   def run
@@ -36,4 +39,5 @@ end
 
 api = API.new
 your_data = api.get_countries_and_cities
-api.parse_event_information(your_data)
+api.parse_countries(your_data)
+api.parse_cities(your_data)

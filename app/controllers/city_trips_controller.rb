@@ -10,14 +10,16 @@ class CityTripsController < ApplicationController
     end
 
     def new
+        trip_id = params[:format]
+        @trip = Trip.find(trip_id)
         @city_trip = CityTrip.new
     end
 
     def create
-        city_trip = CityTrip.new(city_trips_params)
-        city_trip.save
-        if city_trip.save
-            redirect_to city_trip_path(city_trip)
+        @city_trip = CityTrip.new(trip_id: params[:city_trip][:trip_id], city_id: params[:city_trip][:city_id])
+
+        if @city_trip.save
+            redirect_to city_trip_path(@city_trip)
         else
             render :edit
         end

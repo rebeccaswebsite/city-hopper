@@ -1,5 +1,7 @@
 <%= form_for @city_trip do |f| %>
+   <%= f.hidden_field :trip_id, :value => params[:format] %>
    <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+   <strong> Your trip: <%= @trip.name %> </strong>
   <%= f.submit "Submit" %>
 
   <%end%>
