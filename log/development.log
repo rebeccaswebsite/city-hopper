@@ -26297,3 +26297,1123 @@ Processing by CityTripsController#index as HTML
 Completed 200 OK in 193ms (Views: 124.4ms | ActiveRecord: 5.1ms)
 
 
+Started GET "/city_trips" for ::1 at 2019-05-10 10:47:13 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 45ms (Views: 33.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/city_trips/20/edit" for ::1 at 2019-05-10 10:48:11 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCityTrip Load (0.4ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (7.7ms)
+  Rendered city_trips/edit.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= form_for @city_trip do |f| %>
+    2:    <%= f.hidden_field :trip_id, :value => params[:format] %>
+    3:    <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+    4:    <strong> Your trip: <%= @trip.name %> </strong>
+    5:   <%= f.submit "Submit" %>
+    6: 
+    7:   <%end%>
+  
+app/views/city_trips/_form.html.erb:4:in `block in _app_views_city_trips__form_html_erb__430388698001292560_70297411131300'
+app/views/city_trips/_form.html.erb:1:in `_app_views_city_trips__form_html_erb__430388698001292560_70297411131300'
+app/views/city_trips/edit.html.erb:4:in `_app_views_city_trips_edit_html_erb__1203968599693831164_70297418798240'
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:48:22 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.4ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 74ms (Views: 68.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/8" for ::1 at 2019-05-10 10:48:26 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 25.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 10:48:29 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 64ms (Views: 48.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:48:30 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.4ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 61ms (Views: 55.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:49:47 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 10:49:50 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (1.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 67ms (Views: 54.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:49:51 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 70ms (Views: 66.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:49:53 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 59ms (Views: 54.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 10:49:54 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (2.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 67ms (Views: 53.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:50:13 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 94ms (Views: 88.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 10:50:14 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 104ms (Views: 88.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:50:18 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 65ms (Views: 57.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 10:50:22 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.8ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (25.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 67ms (Views: 54.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 10:50:39 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (4.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 58ms (Views: 44.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:50:41 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 93ms (Views: 87.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 10:50:42 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (1.5ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 64ms (Views: 48.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:50:44 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 73ms (Views: 63.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 10:50:45 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (1.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 61ms (Views: 45.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:51:02 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 62ms (Views: 56.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 10:51:06 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.4ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 82ms (Views: 26.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:51:18 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (5.0ms)
+  Rendered city_trips/edit.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= form_for @city_trip do |f| %>
+    2:    <%= f.hidden_field :trip_id, :value => params[:format] %>
+    3:    <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+    4:    <strong> Your trip: <%= @trip.name %> </strong>
+    5:   <%= f.submit "Submit" %>
+    6: 
+    7:   <%end%>
+  
+app/views/city_trips/_form.html.erb:4:in `block in _app_views_city_trips__form_html_erb__430388698001292560_70297436184220'
+app/views/city_trips/_form.html.erb:1:in `_app_views_city_trips__form_html_erb__430388698001292560_70297436184220'
+app/views/city_trips/edit.html.erb:4:in `_app_views_city_trips_edit_html_erb__1203968599693831164_70297409736340'
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:52:05 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (32.1ms)
+  Rendered city_trips/edit.html.erb within layouts/application (34.8ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 3.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= form_for @city_trip do |f| %>
+    2:    <%= f.hidden_field :trip_id, :value => params[:format] %>
+    3:    <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+    4:    <strong> Your trip: <%= @trip.name %> </strong>
+    5:   <%= f.submit "Submit" %>
+    6: 
+    7:   <%end%>
+  
+app/views/city_trips/_form.html.erb:4:in `block in _app_views_city_trips__form_html_erb__430388698001292560_70297451566640'
+app/views/city_trips/_form.html.erb:1:in `_app_views_city_trips__form_html_erb__430388698001292560_70297451566640'
+app/views/city_trips/edit.html.erb:4:in `_app_views_city_trips_edit_html_erb__1203968599693831164_70297451496840'
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:52:21 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:54:37 +0100
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (57.2ms)
+  Rendered city_trips/edit.html.erb within layouts/application (59.1ms)
+Completed 500 Internal Server Error in 135250ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= form_for @city_trip do |f| %>
+    2:    <%= f.hidden_field :trip_id, :value => params[:format] %>
+    3:    <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+    4:    <strong> Your trip: <%= @trip.name %> </strong>
+    5:   <%= f.submit "Submit" %>
+    6: 
+    7:   <%end%>
+  
+app/views/city_trips/_form.html.erb:4:in `block in _app_views_city_trips__form_html_erb__430388698001292560_70297449873820'
+app/views/city_trips/_form.html.erb:1:in `_app_views_city_trips__form_html_erb__430388698001292560_70297449873820'
+app/views/city_trips/edit.html.erb:4:in `_app_views_city_trips_edit_html_erb__1203968599693831164_70297449664240'
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (26.7ms)
+  Rendered city_trips/edit.html.erb within layouts/application (28.1ms)
+Completed 500 Internal Server Error in 1484ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= form_for @city_trip do |f| %>
+    2:    <%= f.hidden_field :trip_id, :value => params[:format] %>
+    3:    <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+    4:    <strong> Your trip: <%= @trip.name %> </strong>
+    5:   <%= f.submit "Submit" %>
+    6: 
+    7:   <%end%>
+  
+app/views/city_trips/_form.html.erb:4:in `block in _app_views_city_trips__form_html_erb__430388698001292560_70297410670680'
+app/views/city_trips/_form.html.erb:1:in `_app_views_city_trips__form_html_erb__430388698001292560_70297410670680'
+app/views/city_trips/edit.html.erb:4:in `_app_views_city_trips_edit_html_erb__1203968599693831164_70297410652320'
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:54:42 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:55:23 +0100
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (8.1ms)
+  Rendered city_trips/edit.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 41469ms (ActiveRecord: 0.6ms)
+
+
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= form_for @city_trip do |f| %>
+    2:    <%= f.hidden_field :trip_id, :value => params[:format] %>
+    3:    <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+    4:    <strong> Your trip: <%= @trip.name %> </strong>
+    5:   <%= f.submit "Submit" %>
+    6: 
+    7:   <%end%>
+  
+app/views/city_trips/_form.html.erb:4:in `block in _app_views_city_trips__form_html_erb__430388698001292560_70297452220940'
+app/views/city_trips/_form.html.erb:1:in `_app_views_city_trips__form_html_erb__430388698001292560_70297452220940'
+app/views/city_trips/edit.html.erb:4:in `_app_views_city_trips_edit_html_erb__1203968599693831164_70297409664060'
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (7.5ms)
+  Rendered city_trips/edit.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 1775ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= form_for @city_trip do |f| %>
+    2:    <%= f.hidden_field :trip_id, :value => params[:format] %>
+    3:    <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+    4:    <strong> Your trip: <%= @trip.name %> </strong>
+    5:   <%= f.submit "Submit" %>
+    6: 
+    7:   <%end%>
+  
+app/views/city_trips/_form.html.erb:4:in `block in _app_views_city_trips__form_html_erb__430388698001292560_70297466525960'
+app/views/city_trips/_form.html.erb:1:in `_app_views_city_trips__form_html_erb__430388698001292560_70297466525960'
+app/views/city_trips/edit.html.erb:4:in `_app_views_city_trips_edit_html_erb__1203968599693831164_70297459313400'
+Started GET "/city_trips/" for ::1 at 2019-05-10 10:55:28 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (26.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 198ms (Views: 140.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 10:55:30 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 75ms (Views: 70.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:55:31 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:3
+  Rendered city_trips/_form.html.erb (7.1ms)
+  Rendered city_trips/edit.html.erb within layouts/application (12.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= form_for @city_trip do |f| %>
+    2:    <%= f.hidden_field :trip_id, :value => params[:format] %>
+    3:    <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+    4:    <strong> Your trip: <%= @trip.name %> </strong>
+    5:   <%= f.submit "Submit" %>
+    6: 
+    7:   <%end%>
+  
+app/views/city_trips/_form.html.erb:4:in `block in _app_views_city_trips__form_html_erb__430388698001292560_70297466375560'
+app/views/city_trips/_form.html.erb:1:in `_app_views_city_trips__form_html_erb__430388698001292560_70297466375560'
+app/views/city_trips/edit.html.erb:4:in `_app_views_city_trips_edit_html_erb__1203968599693831164_70297459131080'
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:57:59 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:30
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:4
+  Rendered city_trips/_form.html.erb (50.4ms)
+  Rendered city_trips/edit.html.erb within layouts/application (59.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 273ms (Views: 187.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:58:10 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:30
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:4
+  Rendered city_trips/_form.html.erb (5.7ms)
+  Rendered city_trips/edit.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 113ms (Views: 105.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:58:30 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:30
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:5
+  Rendered city_trips/_form.html.erb (4.7ms)
+  Rendered city_trips/edit.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 76ms (Views: 65.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 10:59:18 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:30
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:5
+  Rendered city_trips/_form.html.erb (7.6ms)
+  Rendered city_trips/edit.html.erb within layouts/application (11.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 85ms (Views: 73.4ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/city_trips/25" for ::1 at 2019-05-10 10:59:24 +0100
+Processing by CityTripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9wevYDA5zvwt4hZ9iO6ykPxA5Rjr/kndF/miqSpVms/uMJ7gmKkBbqLSt3ZR+60I4xLMptQJdADFfAfWurApiQ==", "city_trip"=>{"trip_id"=>"", "city_id"=>"29"}, "commit"=>"Submit", "id"=>"25"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Trip without an ID):
+  
+app/controllers/city_trips_controller.rb:36:in `update'
+Started PATCH "/city_trips/25" for ::1 at 2019-05-10 10:59:43 +0100
+Processing by CityTripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9wevYDA5zvwt4hZ9iO6ykPxA5Rjr/kndF/miqSpVms/uMJ7gmKkBbqLSt3ZR+60I4xLMptQJdADFfAfWurApiQ==", "city_trip"=>{"trip_id"=>"", "city_id"=>"29"}, "commit"=>"Submit", "id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:36
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:37
+  Rendering city_trips/edit.html.erb within layouts/application
+  Rendered city_trips/_form.html.erb (3.0ms)
+  Rendered city_trips/edit.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @city_trip do |f| %>
+    2:    <%= f.hidden_field :trip_id, :value => params[:format] %>
+    3:    <strong> Your trip: <%= @trip.name %> </strong>
+    4:    <br>
+  
+app/views/city_trips/_form.html.erb:1:in `_app_views_city_trips__form_html_erb__430388698001292560_70297479139540'
+app/views/city_trips/edit.html.erb:3:in `_app_views_city_trips_edit_html_erb__1203968599693831164_70297479125960'
+app/controllers/city_trips_controller.rb:40:in `update'
+Started GET "/city_trips/25" for ::1 at 2019-05-10 11:00:05 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.4ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (58.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 191ms (Views: 165.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 11:00:08 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:30
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:5
+  Rendered city_trips/_form.html.erb (5.8ms)
+  Rendered city_trips/edit.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 81ms (Views: 75.4ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/city_trips/25" for ::1 at 2019-05-10 11:00:10 +0100
+Processing by CityTripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E5gQ/LmwFPOUOy3CcJmEVlvVSx1MHaObrPE3e7VRX4OrhtfU+4mHU+xuXPozzJFGQKITcVdI5WgmX9+UZHwTtA==", "city_trip"=>{"trip_id"=>"", "city_id"=>"30"}, "commit"=>"Submit", "id"=>"25"}
+  [1m[36mCityTrip Load (0.4ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:36
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:37
+  Rendering city_trips/edit.html.erb within layouts/application
+  Rendered city_trips/_form.html.erb (5.4ms)
+  Rendered city_trips/edit.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= form_for @city_trip do |f| %>
+    2:    <%= f.hidden_field :trip_id, :value => params[:format] %>
+    3:    <strong> Your trip: <%= @trip.name %> </strong>
+    4:    <br>
+    5:    <strong> Add a city: <%= f.collection_select(:city_id, City.all, :id, :name) %> </strong> <br> <br>
+    6:   <%= f.submit "Submit" %>
+  
+app/views/city_trips/_form.html.erb:3:in `block in _app_views_city_trips__form_html_erb__430388698001292560_70297453255500'
+app/views/city_trips/_form.html.erb:1:in `_app_views_city_trips__form_html_erb__430388698001292560_70297453255500'
+app/views/city_trips/edit.html.erb:3:in `_app_views_city_trips_edit_html_erb__1203968599693831164_70297453233220'
+app/controllers/city_trips_controller.rb:40:in `update'
+Started GET "/city_trips/25" for ::1 at 2019-05-10 11:00:29 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (47.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 202ms (Views: 175.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 11:00:31 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.4ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:30
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:5
+  Rendered city_trips/_form.html.erb (9.4ms)
+  Rendered city_trips/edit.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 79ms (Views: 71.3ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/city_trips/25" for ::1 at 2019-05-10 11:00:33 +0100
+Processing by CityTripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AJeGUygOjmdX2CKXcQcYp8gARPQs+dPC9F+Z4xmaZzK4iUF7ajcdxy+NU68yUg2303ccmDeslTF+8XEMyLcrBQ==", "city_trip"=>{"trip_id"=>"", "city_id"=>"30"}, "commit"=>"Submit", "id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:34
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:38
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:5
+  Rendered city_trips/_form.html.erb (5.3ms)
+  Rendered city_trips/edit.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 139ms (Views: 115.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 11:00:37 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 83ms (Views: 71.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 11:00:42 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 85ms (Views: 69.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 11:01:17 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (43.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 310ms (Views: 210.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 11:01:20 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 118ms (Views: 112.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 11:01:21 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:30
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:5
+  Rendered city_trips/_form.html.erb (5.0ms)
+  Rendered city_trips/edit.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 74ms (Views: 65.3ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/city_trips/25" for ::1 at 2019-05-10 11:01:24 +0100
+Processing by CityTripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bQ6vHox9DV8Si2pCycY1m28AOeWiljmGGXexjWMqSG3VEGg2zkSe/2reG3qKkyCLdHdhibnDf3WT2VlisgcEWg==", "city_trip"=>{"trip_id"=>"", "city_id"=>"31"}, "commit"=>"Submit", "id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:34
+  [1m[36mTrip Load (1.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[36mCityTrip Update (2.9ms)[0m  [1m[33mUPDATE "city_trips" SET "city_id" = ?, "updated_at" = ? WHERE "city_trips"."id" = ?[0m  [["city_id", 31], ["updated_at", "2019-05-10 10:01:24.131586"], ["id", 25]]
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:38
+Redirected to http://localhost:3000/city_trips/25
+Completed 302 Found in 30ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 11:01:24 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.5ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/city_trips" for ::1 at 2019-05-10 11:01:28 +0100
+Processing by CityTripsController#index as HTML
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT "city_trips".* FROM "city_trips"[0m
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:7
+  Rendering city_trips/index.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/models/city_trip.rb:15
+  Rendered city_trips/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 106ms (Views: 88.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 11:01:29 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 78ms (Views: 71.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 11:01:56 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.2ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:30
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:5
+  Rendered city_trips/_form.html.erb (4.4ms)
+  Rendered city_trips/edit.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 77ms (Views: 70.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/city_trips/25/edit" for ::1 at 2019-05-10 11:01:56 +0100
+Processing by CityTripsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:29
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:30
+  Rendering city_trips/edit.html.erb within layouts/application
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/views/city_trips/_form.html.erb:5
+  Rendered city_trips/_form.html.erb (4.6ms)
+  Rendered city_trips/edit.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 120ms (Views: 113.9ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/city_trips/25" for ::1 at 2019-05-10 11:01:58 +0100
+Processing by CityTripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VFjEVpa3QVlPkmOkieLlaHyXP+rpJW0Jqy5D27r1bkLsRgN+1I7S+TfHEpzKt/B4Z+BnhvJwK/ohgKs0a9gidQ==", "city_trip"=>{"trip_id"=>"", "city_id"=>"30"}, "commit"=>"Submit", "id"=>"25"}
+  [1m[36mCityTrip Load (0.3ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:34
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[36mCityTrip Update (0.7ms)[0m  [1m[33mUPDATE "city_trips" SET "city_id" = ?, "updated_at" = ? WHERE "city_trips"."id" = ?[0m  [["city_id", 30], ["updated_at", "2019-05-10 10:01:58.369263"], ["id", 25]]
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/city_trips_controller.rb:38
+Redirected to http://localhost:3000/city_trips/25
+Completed 302 Found in 31ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/city_trips/25" for ::1 at 2019-05-10 11:01:58 +0100
+Processing by CityTripsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mCityTrip Load (0.5ms)[0m  [1m[34mSELECT  "city_trips".* FROM "city_trips" WHERE "city_trips"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/city_trips_controller.rb:9
+  Rendering city_trips/show.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:1
+  [1m[36mCity Load (0.9ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/city_trips/show.html.erb:2
+  Rendered city_trips/show.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 95ms (Views: 87.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/8" for ::1 at 2019-05-10 11:02:01 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 79ms (Views: 69.2ms | ActiveRecord: 0.5ms)
+
+

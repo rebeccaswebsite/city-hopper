@@ -27,14 +27,16 @@ class CityTripsController < ApplicationController
 
     def edit
         @city_trip = CityTrip.find(params[:id])
+        @trip = @city_trip.trip
     end
 
     def update
-        city_trip = CityTrip.find(params[:id])
+        @city_trip = CityTrip.find(params[:id])
+        @trip = @city_trip.trip
 
-        city_trip.update(city_trips_params)
-        if city_trip.save
-            redirect_to city_trip_path(city_trip)
+        @city_trip.update(city_id: params[:city_trip][:city_id])
+        if @city_trip.save
+            redirect_to city_trip_path(@city_trip)
         else
             render :edit
         end
@@ -48,10 +50,6 @@ class CityTripsController < ApplicationController
     end
 
     private
-
-    def city_trips_params
-        params.require(:city_trip).permit(:trip_id, :city_id)
-    end
 
     def require_login
      return head(:forbidden) unless session.include? :user_id
