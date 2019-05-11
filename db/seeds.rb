@@ -1,8 +1,4 @@
-User.destroy_all
-Trip.destroy_all
-Country.destroy_all
-City.destroy_all
-CityTrip.destroy_all
+require './lib/api.rb'
 
 rebecca = User.create(username: "Rebecca", bio: "Londoner with wanderlust", password: "1234")
 kev = User.create(username: "Kev", bio: "World Cup Enthusiast", password: "password")
@@ -23,3 +19,12 @@ edinburgh = City.create(name: "Edinburgh", info: "City in Scotland", country: un
 CityTrip.create(city: london, trip: winter_break)
 CityTrip.create(city: phoenix, trip: autumn_weekend)
 CityTrip.create(city: new_york, trip: summer_holiday)
+
+
+api = API.new
+raw_data = api.get_countries_and_cities
+
+raw_data.each do |country| 
+    co = Country.create!(name: country["name"])
+    city = co.cities.create!(name: country["capital"])
+end

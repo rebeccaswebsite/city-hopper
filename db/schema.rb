@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_08_091445) do
+ActiveRecord::Schema.define(version: 2019_05_10_122925) do
 
   create_table "cities", force: :cascade do |t|
-    t.string "name"
+    t.string "name", default: "NA"
     t.string "info"
     t.integer "country_id"
     t.datetime "created_at", null: false
