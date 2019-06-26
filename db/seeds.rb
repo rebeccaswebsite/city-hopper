@@ -1,4 +1,4 @@
-require './lib/api.rb'
+require '././lib/api.rb'
 
 rebecca = User.create(username: "Rebecca", bio: "Londoner with wanderlust", password: "1234")
 kev = User.create(username: "Kev", bio: "World Cup Enthusiast", password: "password")
@@ -26,5 +26,7 @@ raw_data = api.get_countries_and_cities
 
 raw_data.each do |country| 
     co = Country.create!(name: country["name"])
-    city = co.cities.create!(name: country["capital"])
+    unless country["capital"] == ""
+        city = co.cities.create!(name: country["capital"])
+    end
 end
