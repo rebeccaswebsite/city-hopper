@@ -1,7 +1,7 @@
 # Introduction
 CityHopper is an app for you to keep track of your city break getaways. You can easily make an itinerary for any trip you are planning to go on, where you may be moving from city to city.
 
-This project was built entirely using Ruby on Rails, with an MVC structure to allow for frontend functionality as well. Using Active Record, we set up a database in SQLite, which we pulled data into using an external API. 
+This project was built entirely using Ruby on Rails, with an MVC structure to allow for frontend functionality as well. Using Active Record, we set up a database in SQLite, which we pulled data into using the RESTcountries API. 
 
 # Getting Started
 
@@ -19,7 +19,7 @@ Once you’re in the project folder, run
 
 To set up your database. Next run
 
-   rail	s db:seed
+   rails db:seed
 
 To populate your database with the countries and cities which are browsable on the app. Then,
 
@@ -36,3 +36,7 @@ You’re now able to create an account and start planning your own getaways!
 
 
 Thank you for checking out CityHopper :) 
+
+# Contributors
+Rebecca Huseyin
+Kevin Lopez 
