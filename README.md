@@ -19,11 +19,11 @@ Once you’re in the project folder, run
 
 To set up your database. Next run
 
-   rails db:seed
+    rails db:seed
 
 To populate your database with the countries and cities which are browsable on the app. Then,
 
-   rails s 
+    rails s 
 
 To run the API needed for the page to load properly.
 
@@ -37,6 +37,5 @@ You’re now able to create an account and start planning your own getaways!
 
 Thank you for checking out CityHopper :) 
 
-# Contributors
-Rebecca Huseyin
-Kevin Lopez 
+# Authors
+Rebecca Huseyin & Kevin Lopez 
