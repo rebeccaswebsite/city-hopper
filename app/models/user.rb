@@ -4,7 +4,4 @@ class User < ApplicationRecord
   validates :username, :bio, presence: true
   validates :bio, length: { maximum: 500 }
 
-  # def my_trips
-  #   CityTrip.all.select { |ct| ct.trip.user.username == self.username }
-  # end
 end
