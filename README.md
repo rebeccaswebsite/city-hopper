@@ -7,7 +7,7 @@ This project was built entirely using Ruby on Rails, with an MVC structure to al
 
 Clone the Github repository onto your machine using the terminal command 
 
-   git clone <url here> 
+    git clone <url here> 
 
 You can find the necessary url on the right hand side of the Github repository. 
 
